@@ -1,10 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import NavBar from "@/components/Navbar";
-import Footer from "@/components/Footer";
-
-// import { Inter } from "next/font/google";
-// const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "David Wang - Portfolio",
@@ -23,7 +19,6 @@ export default function RootLayout({
         <main className="relative overflow-hidden">
           {children}
         </main>
-        {/* <Footer /> */}
       </body>
     </html>
   );

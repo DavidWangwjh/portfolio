@@ -10,27 +10,27 @@ const SwitchDark = () => {
 
   const handleLabelClick = () => {
     if (isDark) {
-      handleSwitchValue(true)
+      handleSwitchValue(false)
       setIsDark(false);
     } else {
-      handleSwitchValue(false)
+      handleSwitchValue(true)
       setIsDark(true);
     }
   };
 
   return (
-    <label className={`theme-switcher-label ${isDark ? "active" : ""}`}>
+    <label className={`theme-switcher-label ${isDark ? "" : "active"}`}>
         <input
             type="checkbox"
             onClick={handleLabelClick}
             className="theme-switcher"
         />
         <div className="switch-handle">
-            <span className={`light-text ${isDark ? 'hidden' : 'block'}`}>
-                <Image src={lightImage} alt="switcher" priority />
+            <span className={`light-text ${isDark ? 'block' : 'hidden'}`}>
+                <Image src={lightImage} width={35} height={35} alt="switcher" priority />
             </span>
-            <span className={`dark-text ${isDark ? 'block' : 'hidden'}`}>
-                <Image src={darkImage} alt="switcher" priority />
+            <span className={`dark-text ${isDark ? 'hidden' : 'block'}`}>
+                <Image src={darkImage} width={35} height={35} alt="switcher" priority />
             </span>
         </div>
     </label>
