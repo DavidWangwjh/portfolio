@@ -29,8 +29,8 @@ const Navbar = () => {
       <Image 
         src="menu.svg"
         alt="menu"
-        width={32}
-        height={32}
+        width={30}
+        height={30}
         className="inline-block cursor-pointer md:hidden"
       />
     </nav>

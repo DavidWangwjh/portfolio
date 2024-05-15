@@ -26,11 +26,11 @@ const SwitchDark = () => {
             className="theme-switcher"
         />
         <div className="switch-handle">
-            <span className={`light-text ${isDark ? 'block' : 'hidden'}`}>
-                <Image src={lightImage} width={35} height={35} alt="switcher" priority />
+            <span className={`light-text ${isDark ? 'block' : 'hidden'} `}>
+                <Image src={lightImage} width={22} height={22} alt="switcher" priority />
             </span>
-            <span className={`dark-text ${isDark ? 'hidden' : 'block'}`}>
-                <Image src={darkImage} width={35} height={35} alt="switcher" priority />
+            <span className={`dark-text ${isDark ? 'hidden' : 'block'} `}>
+                <Image src={darkImage} width={22} height={22} alt="switcher" priority />
             </span>
         </div>
     </label>
