@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import NavBar from "@/components/Navbar";
+import CustomCursor from '@/components/CustomCursor'
 
 export const metadata: Metadata = {
   title: "David Wang - Portfolio",
@@ -14,9 +15,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body>
+      <body className="cursor-none">
         <NavBar />
         <main className="relative overflow-hidden">
+          <CustomCursor />
           {children}
         </main>
       </body>

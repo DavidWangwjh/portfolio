@@ -19,15 +19,15 @@ const Hero = () => {
         </p>
         <ul className="flex flex-row gap-6 md:flex-col">
           {contactInfo.map((link) => (
-              <Link href={link.link} key={link.meta} target="_blank" rel="noopener noreferrer nofollow" className="flex flex-row gap-2 items-center content-center w-max regular-16 group">
+              <Link href={link.link} key={link.meta} target="_blank" rel="noopener noreferrer nofollow" className="cursor-none flex flex-row gap-2 items-center content-center w-max regular-16 group clickable">
                 <Image 
                   src={link.image}
                   alt="camp"
                   width={30}
                   height={30}
-                  className="cursor-pointer transition-all group-hover:w-9"
+                  className="transition-all group-hover:w-9 clickable"
                 />
-                <span className='cursor-pointer transition-all group-hover:font-bold hidden md:block'>
+                <span className='transition-all group-hover:font-bold hidden md:block clickable'>
                   {link.metaInfo}
                 </span>
               </Link>
