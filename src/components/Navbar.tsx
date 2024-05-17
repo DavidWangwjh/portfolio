@@ -6,33 +6,33 @@ import SwitchDark from "./SwitchDark"
 
 const Navbar = () => {
   return (
-    <nav className="flexBetween max-container padding-container relative z-30 py-5">
+    <nav className="flex max-container padding-container relative z-30 py-5">
       <SwitchDark />
 
-      <ul className="hidden h-full gap-12 md:flex">
+      {/* <ul className="hidden h-full gap-12 md:flex">
         {NAV_LINKS.map((link) => (
           <Link href={link.href} key={link.key} className="regular-16 flexCenter cursor-pointer pb-1.5 transition-all hover:font-bold">
             {link.label}
           </Link>
         ))}
-      </ul>
+      </ul> */}
 
-      <div className="md:flexCenter hidden">
+      {/* <div className="md:flexCenter hidden">
         <Button 
           type="button"
           title="Login"
           icon="/user.svg"
           variant="btn_dark_green"
         />
-      </div>
+      </div> */}
 
-      <Image 
+      {/* <Image 
         src="menu.svg"
         alt="menu"
         width={30}
         height={30}
         className="inline-block cursor-pointer md:hidden"
-      />
+      /> */}
     </nav>
   )
 }

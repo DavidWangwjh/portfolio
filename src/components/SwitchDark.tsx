@@ -20,19 +20,19 @@ const SwitchDark = () => {
 
   return (
     <label className={`theme-switcher-label ${isDark ? "" : "active"}`}>
-        <input
-            type="checkbox"
-            onClick={handleLabelClick}
-            className="theme-switcher"
-        />
-        <div className="switch-handle">
-            <span className={`light-text ${isDark ? 'block' : 'hidden'} `}>
-                <Image src={lightImage} width={22} height={22} alt="switcher" priority />
-            </span>
-            <span className={`dark-text ${isDark ? 'hidden' : 'block'} `}>
-                <Image src={darkImage} width={22} height={22} alt="switcher" priority />
-            </span>
-        </div>
+      <input
+        type="checkbox"
+        onClick={handleLabelClick}
+        className="theme-switcher"
+      />
+      <div className="switch-handle">
+        <span className={`light-text ${isDark ? 'block' : 'hidden'} `}>
+          <Image src={lightImage} width={22} height={22} alt="switcher" priority className="theme-image"/>
+        </span>
+        <span className={`dark-text ${isDark ? 'hidden' : 'block'} `}>
+          <Image src={darkImage} width={22} height={22} alt="switcher" priority className="theme-image"/>
+        </span>
+      </div>
     </label>
   );
 };
