@@ -6,7 +6,7 @@ import SwitchDark from "./SwitchDark"
 
 const Navbar = () => {
   return (
-    <nav className="flex max-container padding-container relative z-30 py-5">
+    <nav className="fixed top-5 left-5 z-50 flex w-full flex-row items-center">
       <SwitchDark />
 
       {/* <ul className="hidden h-full gap-12 md:flex">

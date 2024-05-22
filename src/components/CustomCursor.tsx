@@ -7,7 +7,7 @@ const CustomCursor = () => {
   // Reference to the cursor element
   const cursorRef = useRef(null);
   // State to track cursor position
-  const [position, setPosition] = useState({ x: 0, y: 0 });
+  const [position, setPosition] = useState({ x: -50, y: -50 });
   // State to track click event
 //   const [clicked, setClicked] = useState(false);
 
@@ -55,17 +55,17 @@ const CustomCursor = () => {
         <div
             style={{ top: position.y, left: position.x }}
             ref={cursorRef}
-            className={`fixed pointer-events-none transition-all -translate-x-1/2 -translate-y-1/2 z-50 ease-in duration-0 rounded-full w-2 h-2 bg-[#293241]`}
+            className={`fixed pointer-events-none transition-all -translate-x-1/2 -translate-y-1/2 z-50 ease-in duration-0 rounded-full w-2 h-2 bg-[#9b8d25]`}
         />
         <div
             style={{ top: position.y, left: position.x }}
             ref={cursorRef}
-            className={`p-0 fixed pointer-events-none transition-all -translate-x-1/2 -translate-y-1/2 z-40 ease-in duration-[50ms] rounded-full w-10 h-10 border-2 opacity-60 border-[#293241]`}
+            className={`p-0 fixed pointer-events-none transition-all -translate-x-1/2 -translate-y-1/2 z-40 ease-in duration-[50ms] rounded-full w-11 h-11 border-[3px] opacity-60 border-[#9b8d25]`}
         />
         <div
             style={{ top: position.y, left: position.x }}
             ref={cursorRef}
-            className={`p-0 fixed pointer-events-none transition-all -translate-x-1/2 -translate-y-1/2 z-50 ease-in duration-[50ms] rounded-full w-7 h-7 opacity-40 ${isClickable ? "bg-[#293241]" : ""}`}
+            className={`p-0 fixed pointer-events-none transition-all -translate-x-1/2 -translate-y-1/2 z-50 ease-in duration-[50ms] rounded-full w-8 h-8 opacity-40 ${isClickable ? "bg-[#9b8d25]" : ""}`}
         />
         {/* <div
             className={`w-10 h-10 ${clicked ? "scale-100 opacity-100" : "scale-0 opacity-0"} -translate-x-1 -translate-y-1 rounded-full bg-[#554ed4] ease-in transition-all duration-80 z-50`}

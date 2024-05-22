@@ -5,6 +5,7 @@ module.exports = {
     './src/components/**/*.{js,ts,jsx,tsx,mdx}',
     './src/app/**/*.{js,ts,jsx,tsx,mdx}',
   ],
+  darkMode: 'class',
   theme: {
     extend: {
       colors: {
@@ -28,6 +29,8 @@ module.exports = {
         yellow: {
           50: '#FEC601',
         },
+        light: '#dddddd',
+        dark: '#333A3F',
       },
       backgroundImage: {
         'bg-img-1': "url('/img-1.png')",
@@ -40,6 +43,7 @@ module.exports = {
         xs: '400px',
         '3xl': '1680px',
         '4xl': '2200px',
+        'maxh':{'raw': '(max-height: 1024px), (max-width:431px)'},
       },
       maxWidth: {
         '10xl': '1512px',
