@@ -8,7 +8,7 @@ export default function Home() {
     <div className="flex flex-col gap-[10px]">
       {/* <Image src="/assets/background.svg" alt="background" fill priority className="-z-50"/> */}
       <Hero />
-      <Toolkit />
+      {/* <Toolkit /> */}
       <Experience />
     </div>
   )
