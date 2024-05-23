@@ -26,7 +26,7 @@ const Experience = () => {
           <div className="ml-12 p-6 rounded-lg shadow-lg bg-dark dark:bg-light text-light dark:text-dark">
             <div className="flex flex-col md:flex-row justify-between items-center mb-4 gap-4">
               <h3 className="bold-20 self-start">{exp.title} <span className="bold-18 pl-2 gap-2">&mdash;&nbsp; {exp.company}</span></h3>
-              <div className='flex flex-row gap-4 self-start'>
+              <div className='flex flex-row gap-2 md:gap-4 self-start'>
                 {exp.mobile && 
                   <Link href={exp.mobile} key={exp.mobile} target="_blank" rel="noopener noreferrer nofollow" className="cursor-none group clickable">
                     <Image 
