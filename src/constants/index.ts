@@ -31,7 +31,8 @@ export const EXPERIENCES = [
     location: 'San Diego, CA',
     description: 'Developed and published a website and mobile app with over 1200 users, designed as an event platform for university students to host and discover events. Addressed the issue of fragmented event information by scraping and compiling data from various social media into a unified list.',
     skills: ['React Native', 'Next.js', 'Neo4j', 'Python', 'Starlette API', 'Firebase', 'Supabase', 'Docker'],
-    link: "https://www.where2be.app/",
+    web: "https://www.where2be.app/",
+    mobile: "https://apps.apple.com/us/app/where2be-your-school-guide/id1671447709",
     github: "https://github.com/MomentEvents/Where2Be-Web",
   },
   {
@@ -42,7 +43,7 @@ export const EXPERIENCES = [
     location: 'San Diego, CA',
     description: 'Worked in a team of 15+ members across coding, design, and marketing sub-teams to create unique websites for student organizations and businesses. Set up codebase and mentored coding team on web development skills and concepts.',
     skills: ['Leadership', 'HTML', 'JavaScript', 'CSS', 'Firebase'],
-    link: "https://ucsd-uta.netlify.app/",
+    web: "https://ucsd-uta.netlify.app/",
   },
   {
     title: 'Chief Technology Officer',
