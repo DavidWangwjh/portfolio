@@ -20,7 +20,7 @@ const Hero = () => {
         <p className="regular-16 lg:regular-22 pb-8">
            2023 UCSD CS Graduate
         </p>
-        <ul className="flex flex-row gap-6 md:flex-col">
+        <ul className="flex flex-row gap-6">
           {CONTACT_INFO.map((link) => (
               <Link href={link.link} key={link.meta} target="_blank" rel="noopener noreferrer nofollow" className="cursor-none flex flex-row gap-2 items-center content-center w-max regular-16 group clickable">
                 <Image 
@@ -30,9 +30,9 @@ const Hero = () => {
                   height={30}
                   className="transition-all group-hover:w-9 clickable"
                 />
-                <span className='transition-all group-hover:font-bold hidden md:block clickable'>
+                {/* <span className='transition-all group-hover:font-bold hidden md:block clickable'>
                   {link.metaInfo}
-                </span>
+                </span> */}
               </Link>
           ))}
         </ul>
