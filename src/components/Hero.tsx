@@ -32,7 +32,7 @@ const Hero = () => {
         <motion.p className="regular-16 lg:regular-22 pb-8 w-full" initial={{x: '200%'}} animate={{x: 0}} transition={{delay: 1, duration: 1.5}}>
            2023 UCSD CS Graduate
         </motion.p>
-        <motion.ul className="flex flex-row gap-6 w-full" initial={{x: '200%'}} animate={{x: 0}} transition={{delay: 2, duration: 1.5}}>
+        <motion.ul className="flex flex-row gap-6 w-full justify-center md:justify-start" initial={{x: '200%'}} animate={{x: 0}} transition={{delay: 2, duration: 1.5}}>
           {CONTACT_INFO.map((link) => (
               <Link href={link.link} key={link.meta} target="_blank" rel="noopener noreferrer nofollow" className="cursor-none flex flex-row gap-2 items-center content-center w-max regular-16 group clickable">
                 <Image 
