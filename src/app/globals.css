@@ -194,7 +194,7 @@ body.dark {
   /* position: fixed;
   right: 30px;
   left: 30px; */
-  z-index: 99;
+  z-index: 1;
   width: 36px;
   height: 36px;
   border-radius: 50%;

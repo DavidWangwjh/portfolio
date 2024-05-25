@@ -60,7 +60,7 @@ const CustomCursor = () => {
         <div
             style={{ top: position.y, left: position.x }}
             ref={cursorRef}
-            className={`p-0 fixed pointer-events-none transition-all -translate-x-1/2 -translate-y-1/2 z-40 ease-in duration-[50ms] rounded-full w-11 h-11 border-[5px] opacity-60 border-cursor`}
+            className={`p-0 fixed pointer-events-none transition-all -translate-x-1/2 -translate-y-1/2 z-50 ease-in duration-[50ms] rounded-full w-11 h-11 border-[5px] opacity-60 border-cursor`}
         />
         <div
             style={{ top: position.y, left: position.x }}
