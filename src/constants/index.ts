@@ -44,6 +44,7 @@ export const EXPERIENCES = [
     description: 'Worked in a team of 15+ members across coding, design, and marketing sub-teams to create unique websites for student organizations and businesses. Set up codebase and mentored coding team on web development skills and concepts.',
     skills: ['Leadership', 'HTML', 'JavaScript', 'CSS', 'Firebase'],
     web: "https://ucsd-uta.netlify.app/",
+    lg_only: 'true'
   },
   {
     title: 'Chief Technology Officer',

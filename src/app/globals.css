@@ -268,28 +268,3 @@ body.dark {
     }
   }
 }
-
-/* .ticker-wrapper {
-  overflow: hidden;
-  position: relative;
-  width: 100%;
-}
-
-.ticker {
-  display: flex;
-  animation: ticker 10s linear infinite;
-}
-
-.ticker-item {
-  flex: none;
-  margin-right: 2rem;
-}
-
-@keyframes ticker {
-  0% {
-    transform: translateX(100%);
-  }
-  100% {
-    transform: translateX(-100%);
-  }
-} */

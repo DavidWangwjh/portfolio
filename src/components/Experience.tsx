@@ -5,6 +5,7 @@ import Link from 'next/link';
 import SkillsContainer from './SkillsContainer';
 import { EXPERIENCES } from '@/constants';
 import { motion } from 'framer-motion'
+import clsx from 'clsx';
 
 const Experience = () => {
   return (
@@ -48,7 +49,7 @@ const Experience = () => {
                   </Link>
                 }
                 {exp.web && 
-                  <Link href={exp.web} key={exp.web} target="_blank" rel="noopener noreferrer nofollow" className="cursor-none group clickable">
+                  <Link href={exp.web} key={exp.web} target="_blank" rel="noopener noreferrer nofollow" className={clsx("cursor-none group clickable", exp.lg_only && "hidden lg:block")}>
                     <Image 
                       src='/assets/link.png'
                       alt="camp"

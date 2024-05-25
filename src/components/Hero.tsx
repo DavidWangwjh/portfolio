@@ -3,6 +3,7 @@ import Image from 'next/image'
 import { CONTACT_INFO } from '@/constants'
 import Link from 'next/link'
 import { motion } from "framer-motion"
+import HighlightText from './HighlightText'
 
 const Hero = () => {
   return (
@@ -26,12 +27,12 @@ const Hero = () => {
       </motion.div>
       <div className='flex flex-col items-center md:items-start'>
         <motion.h1 className="bold-32 sm:bold-36 md:bold-48 lg:bold-52" initial={{x: '200%'}} animate={{x: 0}} transition={{duration: 1.5}}>{"I'M DAVID WANG"}</motion.h1>
-        <motion.p className="regular-16 lg:regular-22 pt-4 pb-2 w-full" initial={{x: '200%'}} animate={{x: 0}} transition={{delay: 1, duration: 1.5}}>
-           Software Engineer, Web Developer, and App Developer
-        </motion.p>
-        <motion.p className="regular-16 lg:regular-22 pb-8 w-full" initial={{x: '200%'}} animate={{x: 0}} transition={{delay: 1, duration: 1.5}}>
-           2023 UCSD CS Graduate
-        </motion.p>
+        <motion.h2 className="regular-16 lg:regular-22 pt-4 pb-2 w-full" initial={{x: '200%'}} animate={{x: 0}} transition={{delay: 1, duration: 1.5}}>
+          Software Engineer, Web Developer, and App Developer
+        </motion.h2>
+        <motion.h2 className="regular-16 lg:regular-22 pb-8 w-full" initial={{x: '200%'}} animate={{x: 0}} transition={{delay: 1, duration: 1.5}}>
+          2023 UCSD CS Graduate
+        </motion.h2>
         <motion.ul className="flex flex-row gap-6 w-full justify-center md:justify-start" initial={{x: '200%'}} animate={{x: 0}} transition={{delay: 2, duration: 1.5}}>
           {CONTACT_INFO.map((link) => (
               <Link href={link.link} key={link.meta} target="_blank" rel="noopener noreferrer nofollow" className="cursor-none flex flex-row gap-2 items-center content-center w-max regular-16 group clickable">
