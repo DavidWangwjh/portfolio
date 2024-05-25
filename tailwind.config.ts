@@ -31,6 +31,7 @@ module.exports = {
         },
         light: '#dddddd',
         dark: '#333A3F',
+        cursor: '#9b8d25',
       },
       backgroundImage: {
         'bg-img-1': "url('/img-1.png')",

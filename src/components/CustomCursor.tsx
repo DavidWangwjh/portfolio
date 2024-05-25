@@ -55,17 +55,17 @@ const CustomCursor = () => {
         <div
             style={{ top: position.y, left: position.x }}
             ref={cursorRef}
-            className={`fixed pointer-events-none transition-all -translate-x-1/2 -translate-y-1/2 z-50 ease-in duration-0 rounded-full w-2 h-2 bg-[#9b8d25]`}
+            className={`fixed pointer-events-none transition-all -translate-x-1/2 -translate-y-1/2 z-50 ease-in duration-0 rounded-full w-2 h-2 bg-cursor`}
         />
         <div
             style={{ top: position.y, left: position.x }}
             ref={cursorRef}
-            className={`p-0 fixed pointer-events-none transition-all -translate-x-1/2 -translate-y-1/2 z-40 ease-in duration-[50ms] rounded-full w-11 h-11 border-[3px] opacity-60 border-[#9b8d25]`}
+            className={`p-0 fixed pointer-events-none transition-all -translate-x-1/2 -translate-y-1/2 z-40 ease-in duration-[50ms] rounded-full w-11 h-11 border-[5px] opacity-60 border-cursor`}
         />
         <div
             style={{ top: position.y, left: position.x }}
             ref={cursorRef}
-            className={`p-0 fixed pointer-events-none transition-all -translate-x-1/2 -translate-y-1/2 z-50 ease-in duration-[50ms] rounded-full w-8 h-8 opacity-40 ${isClickable ? "bg-[#9b8d25]" : ""}`}
+            className={`p-0 fixed pointer-events-none transition-all -translate-x-1/2 -translate-y-1/2 z-50 ease-in duration-[50ms] rounded-full w-8 h-8 opacity-40 ${isClickable ? "bg-cursor" : ""}`}
         />
         {/* <div
             className={`w-10 h-10 ${clicked ? "scale-100 opacity-100" : "scale-0 opacity-0"} -translate-x-1 -translate-y-1 rounded-full bg-[#554ed4] ease-in transition-all duration-80 z-50`}

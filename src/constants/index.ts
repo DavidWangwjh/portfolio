@@ -29,7 +29,7 @@ export const EXPERIENCES = [
     type: "experience",
     duration: 'April 2023 – Dec 2023',
     location: 'San Diego, CA',
-    description: 'Developed and published a website and mobile app with over 1200 users, designed as an event platform for university students to host and discover events. Addressed the issue of fragmented event information by scraping and compiling data from various social media into a unified list.',
+    description: 'Developed and published a website and mobile app with 1200+ users, designed as an event platform for university students to host and discover events. Addressed the issue of fragmented event information by scraping and compiling data from various social media into a unified list.',
     skills: ['React Native', 'Next.js', 'Neo4j', 'Python', 'Starlette API', 'Firebase', 'Supabase', 'Docker'],
     web: "https://www.where2be.app/",
     mobile: "https://apps.apple.com/us/app/where2be-your-school-guide/id1671447709",
