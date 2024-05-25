@@ -1,15 +1,24 @@
+'use client'
 import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import SkillsContainer from './SkillsContainer';
 import { EXPERIENCES } from '@/constants';
+import { motion } from 'framer-motion'
 
 const Experience = () => {
   return (
-    <section className="max-container padding-container min-h-dvh flex flex-col items-center justify-center">
-      <h1 className="bold-32 sm:bold-36 md:bold-48 self-start mb-6">Experience</h1>
+    <section className="max-container padding-container min-h-dvh flex flex-col items-center justify-center pb-[100px]">
+      <motion.h1 className="bold-32 sm:bold-36 md:bold-48 self-start mb-6" initial={{opacity: 0, x: -200}} whileInView={{opacity: 1, x: 0}} transition={{duration: 2, delay: 0, ease: 'easeInOut'}} viewport={{once: true}}>Experience</motion.h1>
       {EXPERIENCES.map((exp, index) => (
-        <div key={index} className="flex flex-col mb-8 w-full">
+        <motion.div 
+          key={index} 
+          className="flex flex-col mb-8 w-full"
+          initial={{ opacity: 0, x: -200 }}
+          whileInView={{ opacity: 1, x: 0}}
+          transition={{ duration: 2.2, delay: 0, ease: 'easeInOut'}}
+          viewport={{once: true}}
+        >
           <div className="flex flex-row items-center mb-2 gap-3">
             {/* <div className={`flex items-center justify-center rounded-full bg-light border-dark w-12 h-12 ${exp.type == "experience"? "border-2" : "border-[1px]"}`}>
               {exp.type == "experience"? (
@@ -69,7 +78,7 @@ const Experience = () => {
             <p className="mb-4 lg:pr-10">{exp.description}</p>
             <SkillsContainer skills={exp.skills} justify='justify-start' main_theme='light'/>
           </div> 
-        </div>
+        </motion.div>
       ))}
     </section>
   );
