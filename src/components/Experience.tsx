@@ -9,7 +9,7 @@ import clsx from 'clsx';
 
 const Experience = () => {
   return (
-    <section className="max-container padding-container min-h-dvh flex flex-col items-center justify-center pb-[100px]">
+    <section id='experience' className="max-container padding-container min-h-dvh flex flex-col items-center justify-center py-[70px]">
       <motion.h1 className="bold-32 sm:bold-36 md:bold-48 self-start mb-6" initial={{opacity: 0, x: -200}} whileInView={{opacity: 1, x: 0}} transition={{duration: 2, delay: 0, ease: 'easeInOut'}} viewport={{once: true}}>Experience</motion.h1>
       {EXPERIENCES.map((exp, index) => (
         <motion.div 

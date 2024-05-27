@@ -2,6 +2,7 @@ import Experience from "@/components/Experience";
 import Hero from "@/components/Hero";
 import Toolkit from "@/components/Toolkit";
 import Image from "next/image";
+import ScrollIndicator from "@/components/ScrollIndicator";
 
 export default function Home() {
   return (
@@ -10,6 +11,7 @@ export default function Home() {
       <Hero />
       {/* <Toolkit /> */}
       <Experience />
+      <ScrollIndicator />
     </div>
   )
 }
