@@ -77,7 +77,10 @@ const Experience = () => {
               </div>
             </div>
             <p className="mb-4 lg:pr-10">{exp.description}</p>
-            <SkillsContainer skills={exp.skills} justify='justify-start' main_theme='light'/>
+            <motion.div initial={{opacity: 0}} whileInView={{opacity: 1}} transition={{duration: 2, delay: 0.5}} viewport={{once: true}}> 
+              <SkillsContainer skills={exp.skills} justify='justify-start' main_theme='light'/>
+            </motion.div>
+            
           </div> 
         </motion.div>
       ))}
