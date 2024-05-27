@@ -17,7 +17,7 @@ const Experience = () => {
           className="flex flex-col mb-8 w-full"
           initial={{ opacity: 0, x: -200 }}
           whileInView={{ opacity: 1, x: 0}}
-          transition={{ duration: 2.2, delay: 0, ease: 'easeInOut'}}
+          transition={{ duration: 1.8, delay: 0, ease: 'easeInOut'}}
           viewport={{once: true}}
         >
           <div className="flex flex-row items-center mb-2 gap-3">
@@ -77,7 +77,7 @@ const Experience = () => {
               </div>
             </div>
             <p className="mb-4 lg:pr-10">{exp.description}</p>
-            <motion.div initial={{opacity: 0}} whileInView={{opacity: 1}} transition={{duration: 2, delay: 0.5}} viewport={{once: true}}> 
+            <motion.div initial={{opacity: 0}} whileInView={{opacity: 1}} transition={{duration: 1.8, delay: 0.3}} viewport={{once: true}}> 
               <SkillsContainer skills={exp.skills} justify='justify-start' main_theme='light'/>
             </motion.div>
             
