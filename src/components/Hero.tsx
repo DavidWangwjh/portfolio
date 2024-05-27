@@ -28,13 +28,13 @@ const Hero = () => {
       </motion.div>
       <div className='flex flex-col items-center md:items-start w-full md:w-3/5'>
         <TypeAnimation className="bold-32 sm:bold-36 md:bold-48 lg:bold-52" sequence={['', 1000, 'I\'M DAVID WANG']} cursor={false} speed={20}/>
-        <TypeAnimation className="regular-16 lg:regular-22 pt-4 pb-2 w-full" sequence={['', 2300, 'Software Engineer, Web Developer, and App Developer']} cursor={false} speed={80}/>
-        <TypeAnimation className="regular-16 lg:regular-22 pb-8 w-full" sequence={['', 3500, '2023 UCSD CS Graduate']} cursor={false} speed={60}/>
+        <TypeAnimation className="regular-16 lg:regular-22 pt-4 pb-2 px-7 md:px-0 text-center md:text-start w-full" sequence={['', 2300, 'Software Engineer, Web Developer, and App Developer']} cursor={false} speed={80}/>
+        <TypeAnimation className="regular-16 lg:regular-22 pb-8 text-center md:text-start w-full" sequence={['', 3500, '2023 UCSD CS Graduate']} cursor={false} speed={60}/>
         {/* <motion.h1 className="bold-32 sm:bold-36 md:bold-48 lg:bold-52" initial={{x: '200%'}} animate={{x: 0}} transition={{duration: 1.5}}>{"I'M DAVID WANG"}</motion.h1> */}
         {/* <motion.h2 className="regular-16 lg:regular-22 pt-4 pb-2 w-full" initial={{x: '200%'}} animate={{x: 0}} transition={{delay: 1, duration: 1.5}}>
           Software Engineer, Web Developer, and App Developer
         </motion.h2> */}
-        {/* <motion.h2 className="regular-16 lg:regular-22 pb-8 w-full" initial={{x: '200%'}} animate={{x: 0}} transition={{delay: 1, duration: 1.5}}>
+        {/* <motion.h2 className="regular-16 lg:regular-22 pb-8 w-full text-center" initial={{x: '200%'}} animate={{x: 0}} transition={{delay: 1, duration: 1.5}}>
           2023 UCSD CS Graduate
         </motion.h2> */}
         <motion.ul className="flex flex-row gap-6 w-full justify-center md:justify-start" initial={{opacity: 0}} animate={{opacity: 1}} transition={{delay: 4, duration: 2.5}}>
