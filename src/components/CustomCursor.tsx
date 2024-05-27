@@ -51,7 +51,7 @@ const CustomCursor = () => {
   }, []); // useEffect runs only once on mount
 
   return (
-    <>
+    <div className='hidden lg:block'>
         <div
             style={{ top: position.y, left: position.x }}
             ref={cursorRef}
@@ -70,7 +70,7 @@ const CustomCursor = () => {
         {/* <div
             className={`w-10 h-10 ${clicked ? "scale-100 opacity-100" : "scale-0 opacity-0"} -translate-x-1 -translate-y-1 rounded-full bg-[#554ed4] ease-in transition-all duration-80 z-50`}
         /> */}
-    </>
+    </div>
   );
 };
 
