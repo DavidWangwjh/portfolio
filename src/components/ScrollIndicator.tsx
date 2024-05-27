@@ -44,10 +44,10 @@ const ScrollIndicator = () => {
     >
       <button
         onClick={atTop ? scrollToNextSection : scrollToTop}
-        className="flex flex-col items-center justify-center w-9 h-9 md:w-12 md:h-12 bg-[#aaa] rounded-full shadow-lg clickable"
+        className="flex flex-col items-center justify-center w-9 h-9 md:w-12 md:h-12 bg-[#aaa] hover:bg-[#ccc] rounded-full shadow-lg clickable"
       >
         {atTop ? <Image src='/assets/down-arrow.png' alt='down arrow' width={20} height={20} className='clickable'/> : <Image src='/assets/up-arrow.png' alt='up arrow' width={18} height={18} className='w-4 h-4 md:w-5 md:h-5 clickable'/>}
-        {!atTop && <span className="text-[10px] md:text-[12px] text-black">TOP</span>}
+        {!atTop && <span className="text-[10px] md:text-[12px] text-black clickable">TOP</span>}
       </button>
     </motion.div>
   );

@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import NavBar from "@/components/Navbar";
 import CustomCursor from '@/components/CustomCursor'
+import ScrollIndicator from "@/components/ScrollIndicator";
 
 export const metadata: Metadata = {
   title: "David Wang - Portfolio",
@@ -20,6 +21,7 @@ export default function RootLayout({
         <main className="relative overflow-hidden">
           <CustomCursor />
           {children}
+          <ScrollIndicator />
         </main>
       </body>
     </html>
