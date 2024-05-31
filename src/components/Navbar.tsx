@@ -30,11 +30,11 @@ const Navbar = () => {
   }, );
 
   return (
-    <motion.nav className={`fixed z-[100] flex w-full flex-row items-center shadow-lg p-4 bg-dark dark:bg-light text-light dark:text-dark transition-transform duration-300 ${
-      scrollDirection === "down" ? "-translate-y-full" : "translate-y-0"
+    <motion.nav className={`fixed z-[100] flex w-full flex-row justify-center items-center p-8 md:p-6 rounded-b-[50px] bg-dark dark:bg-light text-light dark:text-dark transition-transform ${
+      scrollDirection === "down" ? "-translate-y-full duration-300" : "translate-y-0 duration-300 shadow-lg"
     }`} initial={{opacity: 0}} animate={{opacity: 1}} transition={{duration: 2}}>
       <motion.div
-        className="block rounded-full h-auto w-4/5 md:w-2/5"
+        className="block rounded-full h-auto content-start fixed left-5 top-3"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 1.2, duration: 2, ease: "easeInOut" }}
@@ -50,13 +50,15 @@ const Navbar = () => {
         ))}
       </ul>
 
-      <Image 
-        src="menu.svg"
-        alt="menu"
-        width={30}
-        height={30}
-        className="inline-block cursor-pointer md:hidden"
-      />
+      <div className='fixed right-5 top-3 w-9 h-9 rounded-full bg-[#aaa] flex justify-center items-center md:hidden cursor-pointer'>
+        <Image 
+          src="menu.svg"
+          alt="menu"
+          width={22}
+          height={22}
+        />
+      </div>
+      
     </motion.nav>
   )
 }

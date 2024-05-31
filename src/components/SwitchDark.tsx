@@ -19,7 +19,7 @@ const SwitchDark = () => {
   };
 
   return (
-    <label className={`theme-switcher-label ${isDark ? "" : "active"} clickable`}>
+    <label className={`theme-switcher-label self-start ${isDark ? "" : "active"} clickable`}>
       <input
         type="checkbox"
         onClick={handleLabelClick}
