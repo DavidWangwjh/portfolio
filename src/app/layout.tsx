@@ -16,10 +16,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className="cursor-none">
+      <body className="">
         <NavBar />
-        <main className="relative overflow-hidden">
-          <CustomCursor />
+        <main className="relative overflow-hidden pb-[50px]">
+          {/* <CustomCursor /> */}
           {children}
           <ScrollIndicator />
         </main>

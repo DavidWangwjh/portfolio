@@ -39,7 +39,7 @@ const Hero = () => {
         </motion.h2> */}
         <motion.ul className="flex flex-row gap-6 w-full justify-center md:justify-start" initial={{opacity: 0}} animate={{opacity: 1}} transition={{delay: 4, duration: 2.5}}>
           {CONTACT_INFO.map((link) => (
-              <Link href={link.link} key={link.meta} target="_blank" rel="noopener noreferrer nofollow" className="cursor-none flex flex-row gap-2 items-center content-center w-max regular-16 group clickable">
+              <Link href={link.link} key={link.meta} target="_blank" rel="noopener noreferrer nofollow" className="cursor-pointer flex flex-row gap-2 items-center content-center w-max regular-16 group clickable">
                 <Image 
                   src={link.image}
                   alt="contact"

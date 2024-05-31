@@ -1,5 +1,6 @@
-import Experience from "@/components/Experience";
 import Hero from "@/components/Hero";
+import Experience from "@/components/Experience";
+import Projects from "@/components/Projects";
 
 export default function Home() {
   return (
@@ -7,6 +8,7 @@ export default function Home() {
       {/* <Image src="/assets/background.svg" alt="background" fill priority className="-z-50"/> */}
       <Hero />
       <Experience />
+      <Projects />
     </div>
   )
 }
