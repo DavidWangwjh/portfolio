@@ -16,7 +16,6 @@ const Navbar = ({ activeSection } : NavbarProps) => {
   const [scrollDirection, setScrollDirection] = useState("up");
   const [lastScrollY, setLastScrollY] = useState(0);
   const [displaySideMenu, setDisplaySideMenu] = useState(false);
-
   const [currentSection, setCurrentSection] = useState(activeSection);
 
   useEffect(() => {
@@ -33,6 +32,7 @@ const Navbar = ({ activeSection } : NavbarProps) => {
   };
 
   const handleScroll = () => {
+    setDisplaySideMenu(false);
     const currentScrollY = window.scrollY;
     if (currentScrollY > lastScrollY) {
       setScrollDirection("down");
@@ -66,23 +66,16 @@ const Navbar = ({ activeSection } : NavbarProps) => {
                   `} 
       initial={{opacity: 0}} 
       animate={{opacity: 1}} 
-      transition={{duration: 2}}
+      transition={{duration: 3}}
     >
-      <motion.div
-        className="absolute left-5 top-4"
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ delay: 1.2, duration: 2, ease: "easeInOut" }}
-      >
-        <SwitchDark />
-      </motion.div>
+      <div className="absolute left-5 top-4"><SwitchDark /></div>
 
       <div className='flex flex-row gap-[6px] items-center max-md:absolute right-5 top-3'>
         <ul className={`flex flex-row gap-12 ${displaySideMenu? 'max-md:flex-col max-md:gap-1' : ''}`}>
           {NAV_LINKS.map((link) => (
             <button 
               key={link.key} 
-              className={`regular-18 cursor-pointer transition-all text-black text-right hover:font-bold 
+              className={`regular-18 cursor-pointer transition-all text-black text-right hover:font-bold max-md:underline max-md:underline-offset-4
                           ${currentSection === link.key ? 'underline underline-offset-4 bold-18' : displaySideMenu? '' : 'max-md:hidden'}`}
               onClick={() => scrollToSection(link.key)}
             >

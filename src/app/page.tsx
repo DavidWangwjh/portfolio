@@ -13,14 +13,13 @@ export default function Home() {
   const [activeSection, setActiveSection] = useState('hero');
 
   useEffect(() => {
-    if (inViewHome) {
+    if (inViewHome && !inViewExperience) {
       setActiveSection('hero')
-    } else if (inViewExperience) {
+    } else if (inViewExperience && !inViewHome && !inViewProjects) {
       setActiveSection('experience')
-    } else if (inViewProjects) {
+    } else if (inViewProjects && !inViewExperience) {
       setActiveSection('projects')
     }
-    console.log(activeSection, inViewHome.toString(), inViewExperience.toString(), inViewProjects.toString());
   }, [inViewHome, inViewExperience, inViewProjects]);
 
 

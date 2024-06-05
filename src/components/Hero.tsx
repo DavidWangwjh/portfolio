@@ -34,7 +34,8 @@ const Hero = ({ innerRef }: HeroProps ) => {
       <div className='flex flex-col items-center md:items-start w-full md:w-3/5'>
         <TypeAnimation className="bold-32 sm:bold-36 md:bold-48 lg:bold-52" sequence={['', 1000, 'I\'M DAVID WANG']} cursor={false} speed={20}/>
         <TypeAnimation className="regular-16 lg:regular-22 pt-4 pb-2 px-7 md:px-0 text-center md:text-start w-full" sequence={['', 2300, 'Software Engineer, Web Developer, and App Developer']} cursor={false} speed={80}/>
-        <TypeAnimation className="regular-16 lg:regular-22 pb-8 text-center md:text-start w-full" sequence={['', 3500, '2023 UCSD CS Graduate']} cursor={false} speed={60}/>
+        <TypeAnimation className="max-md:hidden regular-16 lg:regular-18 pb-8 text-center md:text-start w-full" sequence={['', 3500, 'University of California, San Diego | Computer Science B.S.']} cursor={false} speed={80}/>
+        <TypeAnimation className="md:hidden regular-16 lg:regular-18 pb-8 text-center md:text-start w-full" sequence={['', 3500, 'UCSD Computer Science B.S.']} cursor={false} speed={80}/>
         {/* <motion.h1 className="bold-32 sm:bold-36 md:bold-48 lg:bold-52" initial={{x: '200%'}} animate={{x: 0}} transition={{duration: 1.5}}>{"I'M DAVID WANG"}</motion.h1> */}
         {/* <motion.h2 className="regular-16 lg:regular-22 pt-4 pb-2 w-full" initial={{x: '200%'}} animate={{x: 0}} transition={{delay: 1, duration: 1.5}}>
           Software Engineer, Web Developer, and App Developer
