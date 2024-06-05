@@ -34,7 +34,7 @@ const Navbar = ({ activeSection } : NavbarProps) => {
   const handleScroll = () => {
     setDisplaySideMenu(false);
     const currentScrollY = window.scrollY;
-    if (currentScrollY > lastScrollY) {
+    if (currentScrollY > lastScrollY && currentScrollY !== 0) {
       setScrollDirection("down");
     } else {
       setScrollDirection("up");
