@@ -7,10 +7,15 @@ import { PROJECTS } from '@/constants';
 import { motion } from 'framer-motion'
 import clsx from 'clsx';
 import ImageDisplayer from './ImageDisplayer';
+import { LegacyRef } from 'react'
 
-const Projects = () => {
+type ProjectsProps ={
+  innerRef: LegacyRef<HTMLElement>
+}
+
+const Projects = ({ innerRef }: ProjectsProps ) => {
   return (
-    <section id='projects' className="max-container padding-container min-h-dvh flex flex-col items-center justify-center pt-[70px]">
+    <section ref={innerRef} id='projects' className="max-container padding-container min-h-dvh flex flex-col items-center justify-center pt-[70px]">
       <motion.h1 className="bold-32 sm:bold-36 md:bold-48 self-start mb-6" initial={{opacity: 0, x: -150}} whileInView={{opacity: 1, x: 0}} transition={{duration: 1.5, delay: 0, ease: 'easeInOut'}} viewport={{once: true}}>Projects</motion.h1>
       {PROJECTS.map((proj, index) => (
         <motion.div 
@@ -43,12 +48,12 @@ const Projects = () => {
                 <div className='flex flex-row self-end gap-2 md:gap-3'>
                     {proj.mobile && 
                     <Link href={proj.mobile} key={proj.mobile} target="_blank" rel="noopener noreferrer nofollow" className="cursor-pointer group clickable">
-                        <Image src='/assets/mobile.png' alt="camp" width={34} height={34} className="transition-all group-hover:w-10 clickable" />
+                        <Image src='/assets/app-store.png' alt="camp" width={34} height={34} className="transition-all group-hover:w-10 clickable" />
                     </Link>
                     }
                     {proj.web && 
                     <Link href={proj.web} key={proj.web} target="_blank" rel="noopener noreferrer nofollow" className={clsx("cursor-pointer group clickable", proj.lg_only && "hidden lg:block")}>
-                        <Image src='/assets/link.png' alt="camp" width={34} height={34} className="transition-all group-hover:w-10 clickable" />
+                        <Image src='/assets/website.png' alt="camp" width={34} height={34} className="transition-all group-hover:w-10 clickable" />
                     </Link>
                     }
                     {proj.github && 

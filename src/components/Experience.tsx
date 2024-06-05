@@ -6,10 +6,15 @@ import SkillsContainer from './SkillsContainer';
 import { EXPERIENCES } from '@/constants';
 import { motion } from 'framer-motion'
 import clsx from 'clsx';
+import { LegacyRef } from 'react'
 
-const Experience = () => {
+type ExperienceProps ={
+  innerRef: LegacyRef<HTMLElement>
+}
+
+const Experience = ({ innerRef }: ExperienceProps ) => {
   return (
-    <section id='experience' className="max-container padding-container min-h-dvh flex flex-col items-center justify-center pt-[70px]">
+    <section ref={innerRef} id='experience' className="max-container padding-container min-h-dvh flex flex-col items-center justify-center pt-[70px]">
       <motion.h1 className="bold-28 sm:bold-36 md:bold-48 self-start mb-6" initial={{opacity: 0, x: -150}} whileInView={{opacity: 1, x: 0}} transition={{duration: 1.5, delay: 0, ease: 'easeInOut'}} viewport={{once: true}}>Experience</motion.h1>
       {EXPERIENCES.map((exp, index) => (
         <motion.div 

@@ -5,10 +5,15 @@ import Link from 'next/link'
 import { motion } from "framer-motion"
 import HighlightText from './HighlightText'
 import { TypeAnimation } from 'react-type-animation'
+import { LegacyRef } from 'react'
 
-const Hero = () => {
+type HeroProps ={
+  innerRef: LegacyRef<HTMLElement>
+}
+
+const Hero = ({ innerRef }: HeroProps ) => {
   return (
-    <section id='hero' className="max-container padding-container flex flex-col gap-6 py-10 md:gap-20 md:flex-row min-h-dvh max-h-[1024px] items-center justify-center">
+    <section ref={innerRef} id='hero' className="max-container padding-container flex flex-col gap-6 py-10 md:gap-20 md:flex-row min-h-dvh max-h-[1024px] items-center justify-center">
       <motion.div
         className="block rounded-full h-auto w-4/5 md:w-2/5"
         initial={{ y: '-250%', scale: 0.5 }}

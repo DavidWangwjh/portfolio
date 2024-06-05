@@ -17,7 +17,6 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className="">
-        <NavBar />
         <main className="relative overflow-hidden pb-[50px]">
           {/* <CustomCursor /> */}
           {children}

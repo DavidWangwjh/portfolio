@@ -19,18 +19,18 @@ const SwitchDark = () => {
   };
 
   return (
-    <label className={`theme-switcher-label self-start ${isDark ? "" : "active"} clickable`}>
+    <label className='flex items-center justify-center self-start cursor-pointer z-1 rounded-full clickable'>
       <input
-        type="checkbox"
+        type='checkbox'
         onClick={handleLabelClick}
-        className="theme-switcher"
+        className='hidden'
       />
-      <div className="switch-handle clickable">
-        <span className={`light-text ${isDark ? 'block' : 'hidden'} `}>
-          <Image src={lightImage} width={22} height={22} alt="switcher" priority className="theme-image clickable"/>
+      <div className='clickable'>
+        <span className='hidden dark:block'>
+          <Image src={lightImage} width={22} height={22} alt="switcher" priority className="w-6 h-6 md:w-8 md:h-8 clickable"/>
         </span>
-        <span className={`dark-text ${isDark ? 'hidden' : 'block'} `}>
-          <Image src={darkImage} width={22} height={22} alt="switcher" priority className="theme-image clickable"/>
+        <span className='block dark:hidden'>
+          <Image src={darkImage} width={22} height={22} alt="switcher" priority className="w-6 h-6 md:w-8 md:h-8 clickable"/>
         </span>
       </div>
     </label>

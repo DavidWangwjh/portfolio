@@ -1,15 +1,36 @@
 'use client'
 import { NAV_LINKS } from "@/constants"
-import { useEffect, useState } from "react"
+import { useEffect, useState, useRef } from "react"
 import Image from "next/image"
 import Link from "next/link"
 import Button from "./Button"
 import SwitchDark from "./SwitchDark"
 import { motion } from "framer-motion"
+import { useInView } from 'react-intersection-observer';
 
-const Navbar = () => {
+type NavbarProps ={
+  activeSection: string
+}
+
+const Navbar = ({ activeSection } : NavbarProps) => {
   const [scrollDirection, setScrollDirection] = useState("up");
   const [lastScrollY, setLastScrollY] = useState(0);
+  const [displaySideMenu, setDisplaySideMenu] = useState(false);
+
+  const [currentSection, setCurrentSection] = useState(activeSection);
+
+  useEffect(() => {
+    setCurrentSection(activeSection)
+  }, [activeSection])
+
+  const scrollToSection = (toSection: string) => {
+    setDisplaySideMenu(false);
+    const section = document.getElementById(toSection);
+    section?.scrollIntoView({
+        behavior: 'smooth'
+    });
+    setCurrentSection(toSection);
+  };
 
   const handleScroll = () => {
     const currentScrollY = window.scrollY;
@@ -29,12 +50,26 @@ const Navbar = () => {
     };
   }, );
 
+  const toggleMenu = () => {
+    if (displaySideMenu) {
+      setDisplaySideMenu(false);
+    } else {
+      setDisplaySideMenu(true);
+    }
+  }
+
   return (
-    <motion.nav className={`fixed z-[100] flex w-full flex-row justify-center items-center p-8 md:p-6 rounded-b-[50px] bg-dark dark:bg-light text-light dark:text-dark transition-transform ${
-      scrollDirection === "down" ? "-translate-y-full duration-300" : "translate-y-0 duration-300 shadow-lg"
-    }`} initial={{opacity: 0}} animate={{opacity: 1}} transition={{duration: 2}}>
+    <motion.nav 
+      className={`fixed z-[100] flex flex-row w-full justify-center items-center h-[60px] bg-[#888] text-light dark:text-dark transition-transform 
+                  ${scrollDirection == 'down'? '-translate-y-full duration-300' : 'translate-y-0 duration-300'}
+                  ${displaySideMenu? 'max-md:h-[120px]' : ''}
+                  `} 
+      initial={{opacity: 0}} 
+      animate={{opacity: 1}} 
+      transition={{duration: 2}}
+    >
       <motion.div
-        className="block rounded-full h-auto content-start fixed left-5 top-3"
+        className="absolute left-5 top-4"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 1.2, duration: 2, ease: "easeInOut" }}
@@ -42,23 +77,33 @@ const Navbar = () => {
         <SwitchDark />
       </motion.div>
 
-      <ul className="hidden h-full gap-12 md:flex">
-        {NAV_LINKS.map((link) => (
-          <Link href={link.href} key={link.key} className="regular-16 flexCenter cursor-pointer pb-1.5 transition-all hover:font-bold">
-            {link.label}
-          </Link>
-        ))}
-      </ul>
+      <div className='flex flex-row gap-[6px] items-center max-md:absolute right-5 top-3'>
+        <ul className={`flex flex-row gap-12 ${displaySideMenu? 'max-md:flex-col max-md:gap-1' : ''}`}>
+          {NAV_LINKS.map((link) => (
+            <button 
+              key={link.key} 
+              className={`regular-18 cursor-pointer transition-all text-black text-right hover:font-bold 
+                          ${currentSection === link.key ? 'underline underline-offset-4 bold-18' : displaySideMenu? '' : 'max-md:hidden'}`}
+              onClick={() => scrollToSection(link.key)}
+            >
+              {link.label}
+            </button>
+          ))}
+        </ul>
 
-      <div className='fixed right-5 top-3 w-9 h-9 rounded-full bg-[#aaa] flex justify-center items-center md:hidden cursor-pointer'>
-        <Image 
-          src="menu.svg"
-          alt="menu"
-          width={22}
-          height={22}
-        />
+        <button 
+          className='md:hidden w-5 h-8 justify-center items-center self-start cursor-pointer'
+          onClick={() => toggleMenu()}
+        >
+          <Image 
+            src='/assets/down-caret.png'
+            alt='selector'
+            width={20}
+            height={20}
+          />
+        </button>
+        
       </div>
-      
     </motion.nav>
   )
 }

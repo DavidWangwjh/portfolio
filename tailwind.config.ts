@@ -45,6 +45,7 @@ module.exports = {
         '3xl': '1680px',
         '4xl': '2200px',
         'maxh':{'raw': '(max-height: 1024px), (max-width:431px)'},
+        'max-md':{'raw': '(max-width: 768px)'},
       },
       maxWidth: {
         '10xl': '1512px',
