@@ -41,7 +41,7 @@ const ImageDisplayer = ({ images } : ImageDisplayerProps) => {
           <button
             key={index}
             className={`rounded-full clickable ${
-              index === currentIndex ? 'bg-blue-500 w-4 h-4' : 'bg-gray-400 w-3 h-3'
+              index === currentIndex ? 'bg-blue-500 w-4 h-4 max-md:w-3 max-md:h-3' : 'bg-gray-400 w-3 h-3 max-md:w-2 max-md:h-2'
             }`}
             onClick={() => setCurrentIndex(index)}
           />

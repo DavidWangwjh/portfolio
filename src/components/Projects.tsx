@@ -16,7 +16,7 @@ type ProjectsProps ={
 const Projects = ({ innerRef }: ProjectsProps ) => {
   return (
     <section ref={innerRef} id='projects' className="max-container padding-container min-h-dvh flex flex-col items-center justify-center pt-[70px]">
-      <motion.h1 className="bold-32 sm:bold-36 md:bold-48 self-start mb-6" initial={{opacity: 0, x: -150}} whileInView={{opacity: 1, x: 0}} transition={{duration: 1.5, delay: 0, ease: 'easeInOut'}} viewport={{once: true}}>Projects</motion.h1>
+      <motion.h1 className="bold-32 sm:bold-36 md:bold-48 self-start mb-6 underline underline-offset-4" initial={{opacity: 0, x: -150}} whileInView={{opacity: 1, x: 0}} transition={{duration: 1.5, delay: 0, ease: 'easeInOut'}} viewport={{once: true}}>Projects</motion.h1>
       {PROJECTS.map((proj, index) => (
         <motion.div 
           key={index} 
@@ -45,19 +45,19 @@ const Projects = ({ innerRef }: ProjectsProps ) => {
                     </motion.div>
                 </div>
                 <ImageDisplayer images={proj.images}/>
-                <div className='flex flex-row self-end gap-2 md:gap-3'>
+                <div className='flex flex-row self-end gap-2'>
                     {proj.mobile && 
-                    <Link href={proj.mobile} key={proj.mobile} target="_blank" rel="noopener noreferrer nofollow" className="cursor-pointer group clickable">
+                    <Link href={proj.mobile} key={proj.mobile} target="_blank" rel="noopener noreferrer nofollow" className="cursor-pointer group clickable flex justify-center items-center w-10 h-10">
                         <Image src='/assets/app-store.png' alt="camp" width={34} height={34} className="transition-all group-hover:w-10 clickable" />
                     </Link>
                     }
                     {proj.web && 
-                    <Link href={proj.web} key={proj.web} target="_blank" rel="noopener noreferrer nofollow" className={clsx("cursor-pointer group clickable", proj.lg_only && "hidden lg:block")}>
+                    <Link href={proj.web} key={proj.web} target="_blank" rel="noopener noreferrer nofollow" className={clsx("cursor-pointer group clickable flex justify-center items-center w-10 h-10", proj.lg_only && "hidden lg:block")}>
                         <Image src='/assets/website.png' alt="camp" width={34} height={34} className="transition-all group-hover:w-10 clickable" />
                     </Link>
                     }
                     {proj.github && 
-                    <Link href={proj.github} key={proj.github} target="_blank" rel="noopener noreferrer nofollow" className="cursor-pointer group clickable">
+                    <Link href={proj.github} key={proj.github} target="_blank" rel="noopener noreferrer nofollow" className="cursor-pointer group clickable flex justify-center items-center w-10 h-10">
                         <Image src='/assets/github.png' alt="camp" width={34} height={34} className="transition-all group-hover:w-10 clickable" />
                     </Link>
                     }

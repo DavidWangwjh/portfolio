@@ -36,26 +36,17 @@ const Hero = ({ innerRef }: HeroProps ) => {
         <TypeAnimation className="regular-16 lg:regular-22 pt-4 pb-2 px-7 md:px-0 text-center md:text-start w-full" sequence={['', 2300, 'Software Engineer, Web Developer, and App Developer']} cursor={false} speed={80}/>
         <TypeAnimation className="max-md:hidden regular-16 lg:regular-18 pb-8 text-center md:text-start w-full" sequence={['', 3500, 'University of California, San Diego | Computer Science B.S.']} cursor={false} speed={80}/>
         <TypeAnimation className="md:hidden regular-16 lg:regular-18 pb-8 text-center md:text-start w-full" sequence={['', 3500, 'UCSD Computer Science B.S.']} cursor={false} speed={80}/>
-        {/* <motion.h1 className="bold-32 sm:bold-36 md:bold-48 lg:bold-52" initial={{x: '200%'}} animate={{x: 0}} transition={{duration: 1.5}}>{"I'M DAVID WANG"}</motion.h1> */}
-        {/* <motion.h2 className="regular-16 lg:regular-22 pt-4 pb-2 w-full" initial={{x: '200%'}} animate={{x: 0}} transition={{delay: 1, duration: 1.5}}>
-          Software Engineer, Web Developer, and App Developer
-        </motion.h2> */}
-        {/* <motion.h2 className="regular-16 lg:regular-22 pb-8 w-full text-center" initial={{x: '200%'}} animate={{x: 0}} transition={{delay: 1, duration: 1.5}}>
-          2023 UCSD CS Graduate
-        </motion.h2> */}
-        <motion.ul className="flex flex-row gap-6 w-full justify-center md:justify-start" initial={{opacity: 0}} animate={{opacity: 1}} transition={{delay: 4, duration: 2.5}}>
+
+        <motion.ul className="flex flex-row gap-4 w-full justify-center md:justify-start" initial={{opacity: 0}} animate={{opacity: 1}} transition={{delay: 4, duration: 2.5}}>
           {CONTACT_INFO.map((link) => (
-              <Link href={link.link} key={link.meta} target="_blank" rel="noopener noreferrer nofollow" className="cursor-pointer flex flex-row gap-2 items-center content-center w-max regular-16 group clickable">
+              <Link href={link.link} key={link.meta} target="_blank" rel="noopener noreferrer nofollow" className="cursor-pointer flex flex-row items-center content-center justify-center regular-16 group clickable w-10 h-10">
                 <Image 
                   src={link.image}
                   alt="contact"
-                  width={30}
-                  height={30}
-                  className="transition-all group-hover:w-9 clickable"
+                  width={32}
+                  height={32}
+                  className="transition-all group-hover:w-9 group-hover:h-9 clickable"
                 />
-                {/* <span className='transition-all group-hover:font-bold hidden md:block clickable'>
-                  {link.metaInfo}
-                </span> */}
               </Link>
           ))}
         </motion.ul>

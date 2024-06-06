@@ -15,7 +15,7 @@ type ExperienceProps ={
 const Experience = ({ innerRef }: ExperienceProps ) => {
   return (
     <section ref={innerRef} id='experience' className="max-container padding-container min-h-dvh flex flex-col items-center justify-center pt-[70px]">
-      <motion.h1 className="bold-28 sm:bold-36 md:bold-48 self-start mb-6" initial={{opacity: 0, x: -150}} whileInView={{opacity: 1, x: 0}} transition={{duration: 1.5, delay: 0, ease: 'easeInOut'}} viewport={{once: true}}>Experience</motion.h1>
+      <motion.h1 className="bold-28 sm:bold-36 md:bold-48 self-start mb-6 underline underline-offset-4" initial={{opacity: 0, x: -150}} whileInView={{opacity: 1, x: 0}} transition={{duration: 1.5, delay: 0, ease: 'easeInOut'}} viewport={{once: true}}>Experience</motion.h1>
       {EXPERIENCES.map((exp, index) => (
         <motion.div 
           key={index} 
