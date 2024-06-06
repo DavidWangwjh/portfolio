@@ -52,7 +52,7 @@ const Projects = ({ innerRef }: ProjectsProps ) => {
                     </Link>
                     }
                     {proj.web && 
-                    <Link href={proj.web} key={proj.web} target="_blank" rel="noopener noreferrer nofollow" className={clsx("cursor-pointer group clickable flex justify-center items-center w-10 h-10", proj.lg_only && "hidden lg:block")}>
+                    <Link href={proj.web} key={proj.web} target="_blank" rel="noopener noreferrer nofollow" className={clsx("cursor-pointer group clickable flex justify-center items-center w-10 h-10", proj.lg_only && "hidden lg:flex")}>
                         <Image src='/assets/website.png' alt="camp" width={34} height={34} className="transition-all group-hover:w-10 clickable" />
                     </Link>
                     }
