@@ -2,6 +2,7 @@
 import { useState, useEffect } from 'react';
 import Image from 'next/image';
 import { motion } from 'framer-motion'
+import { CaretDoubleDown } from './Icon';
 
 const ScrollIndicator = () => {
   const [atTop, setAtTop] = useState(true);
@@ -37,17 +38,16 @@ const ScrollIndicator = () => {
 
   return (
     <motion.div 
-        className="fixed bottom-5 right-5 clickable cursor-pointer"
+        className="absolute bottom-8 sm:bottom-12 clickable cursor-pointer hidden maxh:flex"
         initial={{ opacity: 0}}
         animate={{ opacity: 1, y: [-6, -4, -2, 0, 2, 4, 2, 0, -2, -4, -6]}}
         transition={{opacity: { delay: 1.2, duration: 2, ease: "easeInOut"}, y: {delay: 2.8, duration: 1.5, ease: "easeInOut", repeat: Infinity}}}
     >
       <button
-        onClick={atTop ? scrollToNextSection : scrollToTop}
-        className="flex flex-col items-center justify-center w-9 h-9 md:w-12 md:h-12 bg-[#aaa] hover:bg-[#ccc] rounded-full shadow-lg clickable cursor-pointer"
+        onClick={scrollToNextSection}
+        className="flex flex-col items-center justify-center w-9 h-9 md:w-12 md:h-12 clickable cursor-pointer"
       >
-        {atTop ? <Image src='/assets/down-arrow.png' alt='down arrow' width={20} height={20} className='clickable'/> : <Image src='/assets/up-arrow.png' alt='up arrow' width={18} height={18} className='w-4 h-4 md:w-5 md:h-5 clickable'/>}
-        {!atTop && <span className="text-[10px] md:text-[12px] text-black clickable">TOP</span>}
+        <CaretDoubleDown className={''}/>
       </button>
     </motion.div>
   );

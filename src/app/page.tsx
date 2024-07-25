@@ -26,8 +26,7 @@ export default function Home() {
   return (
     <div>
       <Navbar activeSection={activeSection}/>
-      <div className="flex flex-col gap-[10px]">
-        {/* <Image src="/assets/background.svg" alt="background" fill priority className="-z-50"/> */}
+      <div className="flex flex-col gap-[10px] text-dark dark:text-light">
         <Hero innerRef={refHome}/>
         <Experience innerRef={refExperience}/>
         <Projects innerRef={refProjects}/>

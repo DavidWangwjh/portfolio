@@ -1,103 +1,58 @@
 'use client'
 import { NAV_LINKS } from "@/constants"
-import { useEffect, useState, useRef } from "react"
-import Image from "next/image"
-import Link from "next/link"
-import Button from "./Button"
-import SwitchDark from "./SwitchDark"
-import { motion } from "framer-motion"
-import { useInView } from 'react-intersection-observer';
+import { useEffect, useState } from "react"
+import useThemeSwitcher from "./hooks/useThemeSwitcher"
+import { MoonIcon, SunIcon } from "./Icon"
 
 type NavbarProps ={
   activeSection: string
 }
 
 const Navbar = ({ activeSection } : NavbarProps) => {
-  const [scrollDirection, setScrollDirection] = useState("up");
-  const [lastScrollY, setLastScrollY] = useState(0);
-  const [displaySideMenu, setDisplaySideMenu] = useState(false);
+  const [mode, setMode] = useThemeSwitcher();
+
   const [currentSection, setCurrentSection] = useState(activeSection);
+  const [targetSection, setTargetSection] = useState('');
 
   useEffect(() => {
-    setCurrentSection(activeSection)
+    if (targetSection == ''){
+      setCurrentSection(activeSection)
+    }
+    if (targetSection == activeSection){
+      setTargetSection('')
+    }
   }, [activeSection])
 
-  const scrollToSection = (toSection: string) => {
-    setDisplaySideMenu(false);
-    const section = document.getElementById(toSection);
-    section?.scrollIntoView({
-        behavior: 'smooth'
-    });
-    setCurrentSection(toSection);
+  const scrollToSection = (sectionId: string) => {
+    setTargetSection(sectionId)
+    setCurrentSection(sectionId)
+    const sectionElement = document.getElementById(sectionId);
+    sectionElement?.scrollIntoView({behavior: 'smooth'});
   };
-
-  const handleScroll = () => {
-    setDisplaySideMenu(false);
-    const currentScrollY = window.scrollY;
-    if (currentScrollY > lastScrollY && currentScrollY !== 0) {
-      setScrollDirection("down");
-    } else {
-      setScrollDirection("up");
-    }
-    setLastScrollY(currentScrollY);
-  };
-
-  useEffect(() => {
-    window.addEventListener('scroll', handleScroll);
-
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-    };
-  }, );
-
-  const toggleMenu = () => {
-    if (displaySideMenu) {
-      setDisplaySideMenu(false);
-    } else {
-      setDisplaySideMenu(true);
-    }
-  }
 
   return (
-    <motion.nav 
-      className={`fixed z-[100] flex flex-row w-full justify-center items-center h-[60px] bg-[#888] text-light dark:text-dark transition-transform 
-                  ${scrollDirection == 'down'? '-translate-y-full duration-300' : 'translate-y-0 duration-300'}
-                  ${displaySideMenu? 'max-md:h-[120px]' : ''}
-                  `} 
-      initial={{opacity: 0}} 
-      animate={{opacity: 1}} 
-      transition={{duration: 3}}
-    >
-      <div className="absolute left-5 top-4"><SwitchDark /></div>
-
-      <div className='flex flex-row gap-[6px] items-center max-md:absolute right-5 top-3'>
-        <ul className={`flex flex-row gap-12 ${displaySideMenu? 'max-md:flex-col max-md:gap-1' : ''}`}>
+    <header className='flex justify-center items-center animate-dropIn fixed top-4 bg-transparent z-[99] w-full px-10'>
+      <div className='flex justify-center items-center pl-6 pr-16 md:px-28 lg:px-48 py-4 bg-light dark:bg-dark bg-opacity-50 rounded-5xl border-[1px] border-[#ccc] dark:border-[#555]  backdrop-blur-md shadow-lg'>
+        <ul className='flex gap-6 md:gap-12'>
           {NAV_LINKS.map((link) => (
             <button 
               key={link.key} 
-              className={`regular-18 cursor-pointer transition-all text-black text-right hover:font-bold max-md:underline max-md:underline-offset-4
-                          ${currentSection === link.key ? 'underline underline-offset-4 bold-18' : displaySideMenu? '' : 'max-md:hidden'}`}
+              className='group relative regular-14 md:regular-20 cursor-pointer text-dark dark:text-light'
               onClick={() => scrollToSection(link.key)}
             >
               {link.label}
+              <span className={`group-hover:w-full transition-[width] ease duration-300 h-[1px] inline-block bg-black dark:bg-light absolute left-0 -bottom-0.5 ${currentSection == link.key ? 'w-full' : 'w-0'}`}>&nbsp;</span>
             </button>
           ))}
         </ul>
-
-        <button 
-          className='md:hidden w-5 h-8 justify-center items-center self-start cursor-pointer'
-          onClick={() => toggleMenu()}
-        >
-          <Image 
-            src='/assets/down-caret.png'
-            alt='selector'
-            width={20}
-            height={20}
-          />
+        <button onClick={() => setMode(mode == 'light'? 'dark' : 'light')} className="absolute right-3 flex items-center justify-center p-1 rounded-full dark:bg-light">
+          {
+            mode == 'dark'? <MoonIcon className='fill-dark' /> : <SunIcon className='fill-dark' />
+          }
         </button>
-        
       </div>
-    </motion.nav>
+    </header>
+
   )
 }
 

@@ -22,35 +22,35 @@ export const TOOLKIT = {
   ]
 }
 
-type EXPERIENCE = {
+export type EXPERIENCE = {
   title: string,
   company: string,
   duration: string,
   location: string,
   description: string,
   skills: string[],
-  // github?: string,
-  // web?: string,
-  // mobile?: string,
+  github?: string,
+  web?: string,
+  mobile?: string,
   // lg_only?: Boolean,
 }
 
 // EXPERIENCES
 export const EXPERIENCES: EXPERIENCE[] = [
-  // {
-  //   title: 'Full Stack Developer',
-  //   company: 'Where2Be',
-  //   duration: 'Apr 2023 – Dec 2023',
-  //   location: 'San Diego, CA',
-  //   description: 'Developed and published a website and mobile app with 1200+ users, creating a central hub for university students to host and discover events. Addressed the issue of fragmented event information by scraping and compiling data from 300+ social media sources.',
-  //   skills: ['React Native', 'Next.js', 'Neo4j', 'Python', 'Starlette API', 'Firebase', 'Docker'],
-  //   web: "https://www.where2be.app/",
-  //   mobile: "https://apps.apple.com/us/app/where2be-your-school-guide/id1671447709",
-  //   github: "https://github.com/MomentEvents/Where2Be-Web",
-  // },
+  {
+    title: 'Full Stack Developer',
+    company: 'Where2Be',
+    duration: 'Apr 2023 – Dec 2023',
+    location: 'San Diego, CA',
+    description: 'Developed and published a website and mobile app with 1200+ users, creating a central hub for university students to host and discover events. Addressed the issue of fragmented event information by scraping and compiling data from 300+ social media sources.',
+    skills: ['React Native', 'Next.js', 'Neo4j', 'Python', 'Starlette API', 'Firebase', 'Docker'],
+    web: "https://www.where2be.app/",
+    mobile: "https://apps.apple.com/us/app/where2be-your-school-guide/id1671447709",
+    github: "https://github.com/MomentEvents/Where2Be-Web",
+  },
   {
     title: 'Lead Developer',
-    company: 'We@vers',
+    company: 'Weavers',
     duration: 'May 2023 – Sep 2023',
     location: 'San Diego, CA',
     description: 'Worked in a multi-functional team of 15+ UCSD students to create custom websites for student organizations. Set up GitHub project codebase and Firebase database & hosting, as well as mentoring novice developers on web development tools and skills.',
@@ -76,7 +76,7 @@ export const EXPERIENCES: EXPERIENCE[] = [
   },
 ];
 
-type PROJECT = {
+export type PROJECT = {
   title: string,
   organization: string,
   // duration: string,
@@ -88,6 +88,7 @@ type PROJECT = {
   mobile?: string,
   lg_only?: Boolean,
   images: string[],
+  image: string
 }
 
 // PROJECTS
@@ -103,6 +104,18 @@ export const PROJECTS: PROJECT[] = [
     mobile: "https://apps.apple.com/us/app/where2be-your-school-guide/id1671447709",
     github: "https://github.com/MomentEvents/Where2Be-Web",
     images: ['/projects/w2b-web.png', '/projects/w2b-app-1.webp', '/projects/w2b-app-2.webp', '/projects/w2b-app-3.webp', '/projects/w2b-app-4.webp'],
+    image: '/projects/w2b-cover.png'
+  },
+  {
+    title: 'MoodGuru',
+    organization: 'CodePath Android App Development',
+    // duration: 'Apr 2022 – May 2022',
+    // location: 'Remote',
+    description: 'Worked in a team of 3 app developers to create a mood-tracking Android app integrated with NLP to analyze user journals. Showcased the app to a national audience as a top 10 finalist at the CodePath 2022 National Demo Day.',
+    skills: ['Java', 'Kotlin', 'Android Studio', 'NLP', 'Figma'],
+    github: "https://github.com/TeamMoodTrackerADY/MoodGuru",
+    images: ['/projects/moodguru-signin.png', '/projects/moodguru-journals.png', '/projects/moodguru-journal.png', '/projects/moodguru-moods.png', '/projects/moodguru-advice.png', '/projects/moodguru-chart.png'],
+    image: '/projects/moodguru-cover.png'
   },
   {
     title: 'Don\'t Budge, Do Budget',
@@ -115,16 +128,7 @@ export const PROJECTS: PROJECT[] = [
     web: "https://cse110-fa22-group34.github.io/cse110-fa22-group34/source/index.html",
     lg_only: true,
     images: ['/projects/dbdb-brief.png', '/projects/dbdb-full.png'],
-  },
-  {
-    title: 'MoodGuru',
-    organization: 'CodePath Android App Development',
-    // duration: 'Apr 2022 – May 2022',
-    // location: 'Remote',
-    description: 'Worked in a team of 3 app developers to create a mood-tracking Android app integrated with NLP to analyze user journals. Showcased the app to a national audience as a top 10 finalist at the CodePath 2022 National Demo Day.',
-    skills: ['Java', 'Kotlin', 'Android Studio', 'NLP', 'Figma'],
-    github: "https://github.com/TeamMoodTrackerADY/MoodGuru",
-    images: ['/projects/moodguru-signin.png', '/projects/moodguru-journals.png', '/projects/moodguru-journal.png', '/projects/moodguru-moods.png', '/projects/moodguru-advice.png', '/projects/moodguru-chart.png'],
+    image: '/projects/dbdb-cover.png'
   },
   {
     title: 'Overflowed',
@@ -135,5 +139,6 @@ export const PROJECTS: PROJECT[] = [
     skills: ['C#', 'Unity'],
     web: "https://jamespeach.itch.io/overflowed",
     images: ['/projects/overflowed-intro.png', '/projects/overflowed-gameplay.png'],
+    image: '/projects/overflowed-cover.png'
   },
 ];

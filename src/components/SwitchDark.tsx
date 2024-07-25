@@ -19,7 +19,7 @@ const SwitchDark = () => {
   };
 
   return (
-    <label className='flex items-center justify-center self-start cursor-pointer z-1 rounded-full clickable'>
+    <label className='flex items-center justify-center self-start cursor-pointer rounded-full clickable'>
       <input
         type='checkbox'
         onClick={handleLabelClick}

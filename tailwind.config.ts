@@ -8,6 +8,18 @@ module.exports = {
   darkMode: 'class',
   theme: {
     extend: {
+      fontFamily: {
+        mont: ['var(--font-mont)'],
+      },
+      keyframes: {
+        dropIn: {
+          '0%': { transform: 'translateY(-150%)' },
+          '100%': { transform: 'translateY(0)' },
+        }
+      },
+      animation: {
+        dropIn: 'dropIn 1s ease-in',
+      },
       colors: {
         green: {
           50: '#30AF5B',
@@ -29,8 +41,10 @@ module.exports = {
         yellow: {
           50: '#FEC601',
         },
-        light: '#dddddd',
-        dark: '#333A3F',
+        light: '#f5f5f5',
+        dark: '#1b1b1b',
+        primary: '#b63e96',
+        primaryDark: '#58e6d9',
         cursor: '#9b8d25',
       },
       backgroundImage: {
@@ -44,8 +58,8 @@ module.exports = {
         xs: '400px',
         '3xl': '1680px',
         '4xl': '2200px',
-        'maxh':{'raw': '(max-height: 1024px), (max-width:431px)'},
-        'max-md':{'raw': '(max-width: 768px)'},
+        'maxh':{'raw': '(max-height: 1023px), (max-width:431px)'},
+        'max-md':{'raw': '(max-width: 767px)'},
       },
       maxWidth: {
         '10xl': '1512px',
