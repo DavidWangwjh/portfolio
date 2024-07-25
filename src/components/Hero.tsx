@@ -30,14 +30,15 @@ const Hero = ({ innerRef }: HeroProps ) => {
             width={300}
             height={300}
             className="rounded-full w-full border-8"
+            priority
         />
       </motion.div>
       <div className='flex flex-col items-center lg:items-start w-full md:w-4/5 lg:w-3/5'>
-        <TypeAnimation className="bold-32 sm:bold-36 md:bold-48 lg:bold-52" sequence={['', 1000, 'I\'M DAVID WANG']} cursor={false} speed={20}/>
-        <TypeAnimation className="regular-16 lg:regular-22 pt-4 pb-2 px-7 lg:px-0 text-center lg:text-start w-full" sequence={['', 2300, 'Software Engineer, Web Developer, and App Developer']} cursor={false} speed={80}/>
-        <TypeAnimation className="max-md:hidden regular-16 lg:regular-18 pb-8 text-center lg:text-start w-full" sequence={['', 3500, 'University of California, San Diego | Computer Science B.S.']} cursor={false} speed={80}/>
-        <TypeAnimation className="md:hidden regular-16 lg:regular-18 pb-8 text-center lg:text-start w-full" sequence={['', 3500, 'UCSD Computer Science B.S.']} cursor={false} speed={80}/>
-        <motion.ul className="flex flex-row gap-4 md:gap-6 w-full justify-center lg:justify-start items-center" initial={{opacity: 0}} animate={{opacity: 1}} transition={{delay: 4, duration: 2.5}}>
+        <TypeAnimation className="bold-32 sm:bold-36 md:bold-48 lg:bold-52" sequence={['', 1000, 'I\'M DAVID WANG']} cursor={false} speed={40}/>
+        <TypeAnimation className="regular-16 lg:regular-22 pt-4 pb-2 px-7 lg:px-0 text-center lg:text-start w-full" sequence={['', 2000, 'Software Engineer, Web Developer, and App Developer']} cursor={false} speed={90}/>
+        <TypeAnimation className="max-md:hidden regular-16 lg:regular-18 pb-8 text-center lg:text-start w-full" sequence={['', 2800, 'University of California, San Diego | Computer Science B.S.']} cursor={false} speed={90}/>
+        <TypeAnimation className="md:hidden regular-16 lg:regular-18 pb-8 text-center lg:text-start w-full" sequence={['', 3000, 'UCSD Computer Science B.S.']} cursor={false} speed={90}/>
+        <motion.ul className="flex flex-row gap-4 md:gap-6 w-full justify-center lg:justify-start items-center" initial={{opacity: 0}} animate={{opacity: 1}} transition={{delay: 3, duration: 2.5}}>
           <Link href='/resume.html' target="_blank" rel="noopener noreferrer nofollow" className='flex items-center bg-black dark:bg-light text-light dark:text-dark py-2.5 px-4 gap-2 rounded-lg text-lg font-semibold hover:scale-110'>
             RESUME
             <LinkArrow className={''}/>
