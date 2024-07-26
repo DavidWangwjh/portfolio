@@ -49,7 +49,7 @@ const Experience = ({ innerRef }: ExperienceProps ) => {
       <motion.h1 className="bold-28 sm:bold-32 md:bold-40 w-3/4 text-center mb-10 underline underline-offset-4" initial={{opacity: 0, x: -150}} whileInView={{opacity: 1, x: 0}} transition={{duration: 1.5, delay: 0, ease: 'easeInOut'}} viewport={{once: true}}>Experience</motion.h1>
       <div ref={ref} className='w-4/5 lg:w-3/4 mx-auto relative'>
         <motion.div 
-          className='absolute -left-2 lg:left-9 top-2 w-[4px] h-full bg-dark dark:bg-light origin-top'
+          className='absolute -left-4 md:-left-2 lg:left-9 top-4 w-[3px] md:w-[4px] h-full bg-dark dark:bg-light origin-top'
           style={{scaleY: scrollYProgress}}
         />
         <ul className='flex flex-col w-full items-center justify-between lg:ml-4'>
