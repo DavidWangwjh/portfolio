@@ -69,5 +69,11 @@ module.exports = {
       },
     },
   },
-  plugins: [],
+  variants: {
+    backdropFilter: ['responsive'], // Ensure responsiveness
+  },
+  plugins: [
+    require('tailwindcss-filters'),
+    // other plugins
+  ],
 };
