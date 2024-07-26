@@ -1,12 +1,8 @@
 'use client'
-import React, {useRef} from 'react';
-import Image from 'next/image';
-import Link from 'next/link';
+import React, {useRef, LegacyRef} from 'react';
 import SkillsContainer from './SkillsContainer';
 import { EXPERIENCES, EXPERIENCE } from '@/constants';
 import { motion, useScroll } from 'framer-motion'
-import clsx from 'clsx';
-import { LegacyRef } from 'react'
 import LiIcon from './LiIcon'
 
 type ExperienceProps ={
@@ -32,7 +28,7 @@ const ExperienceItem = ({ exp }: ExperienceItemProps) => {
           <h2 className='bold-20 lg:bold-24'>{exp.title}</h2>
           <h2 className='bold-20 lg:bold-24'><span className='md:ml-2 bold-16 lg:bold-20'>@</span>{exp.company}</h2>
         </div>
-        <h2 className='regular-16 text-dark/60 dark:text-light/60 mb-2'>{exp.duration} | {exp.location}</h2>
+        <h2 className='regular-14 lg:regular-16 text-dark/60 dark:text-light/60 mb-2'>{exp.duration} | {exp.location}</h2>
         <p className='regular-12 mb-2'>{exp.description}</p>
         <SkillsContainer skills={exp.skills} justify='justify-start' main_theme='dark'/>
       </motion.div>
@@ -42,7 +38,7 @@ const ExperienceItem = ({ exp }: ExperienceItemProps) => {
 
 const Experience = ({ innerRef }: ExperienceProps ) => {
   const ref = useRef(null);
-  const { scrollYProgress} = useScroll(
+  const { scrollYProgress } = useScroll(
     {
       target: ref,
       offset: ['start end', 'center start']

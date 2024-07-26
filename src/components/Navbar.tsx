@@ -31,8 +31,8 @@ const Navbar = ({ activeSection } : NavbarProps) => {
   };
 
   return (
-    <header className='flex justify-center items-center animate-dropIn fixed top-4 z-[99] w-full px-10 bg-transparent'>
-      <div className='relative flex justify-center items-center pl-6 pr-16 md:px-28 lg:px-48 py-4 bg-light dark:bg-dark bg-opacity-80 backdrop-blur-md rounded-5xl border-[1px] border-[#ccc] dark:border-[#555] shadow-lg'>
+    <header className='flex justify-center items-center animate-dropIn fixed top-4 z-[99] w-full px-10'>
+      <div className='relative flex justify-center items-center pl-6 pr-16 md:px-28 lg:px-48 py-4 bg-light dark:bg-dark bg-opacity-70 backdrop-blur rounded-5xl border-[1px] border-[#ccc] dark:border-[#555] shadow-lg'>
         <ul className='flex gap-6 md:gap-12'>
           {NAV_LINKS.map((link) => (
             <button 

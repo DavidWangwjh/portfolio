@@ -1,9 +1,6 @@
 import type { Metadata } from "next";
 import { Montserrat } from 'next/font/google'
 import "./globals.css";
-import NavBar from "@/components/Navbar";
-import CustomCursor from '@/components/CustomCursor'
-import ScrollIndicator from "@/components/ScrollIndicator";
 
 const montserrat = Montserrat({
   subsets: ['latin'],

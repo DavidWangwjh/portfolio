@@ -1,4 +1,3 @@
-import Image from "next/image";
 import { TOOLKIT } from "@/constants";
 import SkillsContainer from "./SkillsContainer";
 

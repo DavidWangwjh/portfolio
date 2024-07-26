@@ -1,13 +1,10 @@
 'use client'
-import React from 'react';
+import React, {LegacyRef} from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
-import SkillsContainer from './SkillsContainer';
 import { PROJECTS, PROJECT } from '@/constants';
 import { motion } from 'framer-motion'
 import clsx from 'clsx';
-import ImageSlideShow from './ImageSlideShow';
-import { LegacyRef } from 'react'
 
 const FramerImage = motion(Image)
 
@@ -28,7 +25,6 @@ const ProjectItem = ({ proj }: ProjectItemProps) => {
       transition={{duration: 1, type:'spring'}}
     >
       <li className="relative w-full rounded-2xl flex flex-col border-2 border-dark dark:border-light bg-light dark:bg-dark z-20 p-2">
-          {/* <ImageSlideShow images={proj.images}/> */}
         <div className='w-full max-h-[300px] rounded-2xl overflow-hidden'>
           <FramerImage src={proj.image} alt='cover img' width={300} height={220} className='w-full h-auto' whileHover={{scale: 1.05}} transition={{duration: 0.2}}/>
         </div>

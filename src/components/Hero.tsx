@@ -1,11 +1,11 @@
 'use client'
+import { LegacyRef } from 'react'
 import Image from 'next/image'
-import { CONTACT_INFO } from '@/constants'
 import Link from 'next/link'
+import { CONTACT_INFO } from '@/constants'
 import { motion } from "framer-motion"
 import { TypeAnimation } from 'react-type-animation'
-import { LegacyRef } from 'react'
-import { GithubIcon, LinkArrow } from './Icon'
+import { LinkArrow } from './Icon'
 import ScrollIndicator from './ScrollIndicator'
 
 type HeroProps ={
@@ -14,7 +14,7 @@ type HeroProps ={
 
 const Hero = ({ innerRef }: HeroProps ) => {
   return (
-    <section ref={innerRef} id='hero' className='relative padding-container w-full flex flex-col gap-6 lg:gap-20 lg:flex-row pt-[120px] pb-10 maxh:pt-10  maxh:min-h-dvh items-center justify-center bg-gradient-to-b from-[#CEE5FD] to-[#f5f5f5] dark:from-[#02294F] dark:to-[rgba(9,14,16,0)] bg-no-repeat bg-[length:100%_20%]'>
+    <section ref={innerRef} id='hero' className='padding-container w-full flex flex-col gap-6 lg:gap-20 lg:flex-row pt-[120px] pb-10 maxh:pt-10  maxh:min-h-dvh items-center justify-center bg-gradient-to-b from-[#CEE5FD] to-[#f5f5f5] dark:from-[#02294F] dark:to-[rgba(9,14,16,0)] bg-no-repeat bg-[length:100%_20%]'>
       <motion.div
         className="block rounded-full h-auto w-4/5 md:w-2/5 max-w-[250px] md:max-w-[600px]"
         initial={{ y: '-250%', scale: 0.5 }}
