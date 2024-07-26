@@ -38,7 +38,7 @@ const ScrollIndicator = () => {
 
   return (
     <motion.div 
-        className="absolute bottom-8 sm:bottom-12 clickable cursor-pointer hidden maxh:flex"
+        className="absolute bottom-8 sm:bottom-12 clickable cursor-pointer"
         initial={{ opacity: 0}}
         animate={{ opacity: 1, y: [-6, -4, -2, 0, 2, 4, 2, 0, -2, -4, -6]}}
         transition={{opacity: { delay: 1.2, duration: 2, ease: "easeInOut"}, y: {delay: 2.8, duration: 1.5, ease: "easeInOut", repeat: Infinity}}}
