@@ -39,7 +39,7 @@ const Hero = ({ innerRef }: HeroProps ) => {
         <TypeAnimation className="max-md:hidden regular-16 lg:regular-18 pb-8 text-center lg:text-start w-full" sequence={['', 2800, 'University of California, San Diego | Computer Science B.S.']} cursor={false} speed={90}/>
         <TypeAnimation className="md:hidden regular-16 lg:regular-18 pb-8 text-center lg:text-start w-full" sequence={['', 3000, 'UCSD Computer Science B.S.']} cursor={false} speed={90}/>
         <motion.ul className="flex flex-row gap-4 md:gap-6 w-full justify-center lg:justify-start items-center" initial={{opacity: 0}} animate={{opacity: 1}} transition={{delay: 3, duration: 2.5}}>
-          <Link href='/resume.html' target="_blank" rel="noopener noreferrer nofollow" className='flex items-center bg-black dark:bg-light text-light dark:text-dark py-2.5 px-4 gap-2 rounded-lg text-lg font-semibold hover:scale-110'>
+          <Link href='/resume/resume.html' target="_blank" rel="noopener noreferrer nofollow" className='flex items-center bg-black dark:bg-light text-light dark:text-dark py-2.5 px-4 gap-2 rounded-lg text-lg font-semibold hover:scale-110'>
             RESUME
             <LinkArrow className={''}/>
           </Link>
