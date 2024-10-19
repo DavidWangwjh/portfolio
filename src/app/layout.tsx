@@ -20,10 +20,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body>
+      <body className='bg-light dark:bg-dark'>
         <main className={`${montserrat.variable} font-mont bg-light dark:bg-dark w-full min-h-screen -z-[20]`}>
           {children}
-          {/* <ScrollIndicator /> */}
         </main>
       </body>
     </html>
