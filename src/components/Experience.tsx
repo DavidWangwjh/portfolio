@@ -17,7 +17,7 @@ const ExperienceItem = ({ exp }: ExperienceItemProps) => {
   const ref = useRef(null);
   return(
     <li ref={ref} className="flex flex-col my-8 first:mt-0 last:mb-0 w-[90%] lg:w-4/5 gap-1.5">
-      {/* <LiIcon reference={ref}/> */}
+      <LiIcon reference={ref}/>
       <motion.div 
         initial={{y:80}}
         whileInView={{y:0}}

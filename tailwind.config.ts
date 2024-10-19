@@ -46,6 +46,8 @@ module.exports = {
         primary: '#b63e96',
         primaryDark: '#58e6d9',
         cursor: '#9b8d25',
+        lightBlue: '#CEE5FD',
+        darkBlue: '#02294F',
       },
       backgroundImage: {
         'bg-img-1': "url('/img-1.png')",
