@@ -1,6 +1,6 @@
 // NAVIGATION
 export const NAV_LINKS = [
-  { href: '/', key: 'hero', label: 'Home' },
+  { href: '/', key: 'hero', label: 'About' },
   { href: '/', key: 'experience', label: 'Experience' },
   { href: '/', key: 'projects', label: 'Projects' },
 ];
@@ -42,7 +42,7 @@ export const EXPERIENCES: EXPERIENCE[] = [
     company: 'Code Ninjas',
     duration: 'Feb 2025 – Present',
     location: 'Union City, CA',
-    description: 'Coached over 70 students in Python and JavaScript, strengthening their coding and problem-solving abilities. Taught 3D Unity game development in C#, resulting in more than 5 student-built games within 2 months. Additionally, designed and delivered age- and skill-appropriate curricula to maximize student engagement and learning outcomes.',
+    description: 'Coached "70+ students" in "Python" and "JavaScript", strengthening their coding and problem-solving abilities. Taught "3D Unity game development in C#", resulting in "5+ student-built games within 2 months". Additionally, designed and delivered age- and skill-appropriate curricula to maximize student engagement and learning outcomes.',
     skills: ['Python', 'JavaScript', 'C#', 'Unity'],
   },
   {
@@ -50,7 +50,7 @@ export const EXPERIENCES: EXPERIENCE[] = [
     company: 'Where2Be',
     duration: 'Apr 2023 – Dec 2023',
     location: 'Remote',
-    description: 'Developed and launched a React Native mobile app, serving as a dedicated college events platform with over 2,000 users. Built a Starlette API backend written in Python, integrating a Neo4j database and Docker containers. Additionally, designed and developed a responsive landing page using Next.js, driving user engagement and marketing for the app.',
+    description: 'Launched a "React Native" mobile app, attracting "2,000+ users" as a dedicated college events platform. Built a "Starlette API backend in Python", seamlessly integrating a "Neo4j" database and "Docker" containers. Additionally, created a dynamic website using "Next.js" and "Tailwind CSS" to boost user engagement and marketing.',
     skills: ['React Native', 'Next.js', 'Python', 'Starlette API', 'Neo4j', 'Firebase', 'Docker'],
     web: "https://www.where2be.app/",
     mobile: "https://apps.apple.com/us/app/where2be-your-school-guide/id1671447709",
@@ -61,7 +61,7 @@ export const EXPERIENCES: EXPERIENCE[] = [
     company: 'Weavers',
     duration: 'May 2023 – Sep 2023',
     location: 'Remote',
-    description: 'Collaborated with a multi-functional team of over 15 members to create custom websites for student organizations. Guided novice developers on software development tools and concepts, such as coding in HTML & CSS & JavaScript and applying Agile methodology. Integrated Firebase into the project, including real-time database, cloud storage, hosting, and deployment workflows.',
+    description: 'Collaborated with a "cross-functional team of 15+ members" to deliver custom websites for clients. Mentored novice developers in "HTML", "CSS", and "JavaScript", introducing "Agile" development practices to enhance productivity. Implemented "Firebase" real-time database, cloud storage, and automated "GitHub" deployment workflows.',
     skills: ['Leadership', 'Agile', 'HTML', 'CSS', 'JavaScript', 'Firebase'],
     // web: "https://ucsd-uta.netlify.app/",
     // lg_only: true
@@ -71,7 +71,7 @@ export const EXPERIENCES: EXPERIENCE[] = [
     company: 'Prolympia',
     duration: 'Sep 2022 – Apr 2023',
     location: 'San Diego, CA',
-    description: 'Led the full stack development of a React Native mobile app that addressed market needs. Acted as scrum master, planning and managing sprints and milestones, which resulted in a 90% increase in team efficiency. Conducted iterative customer research and interviews, then translated user requirements into a clear and intuitive UI, adhering to user-centered design principles. Built a FastAPI backend server written in Python, integrating Firebase and PostgreSQL databases for optimized data security and management.',
+    description: 'Led "Full Stack" development of a "React Native" app, designing a user-friendly UI aligned with product goals. Developed a "FastAPI backend in Python", integrating "Firebase" and "PostgreSQL" databases for scalability. Served as "Scrum Master", "improving team efficiency by 90%" through "Agile" planning and sprint execution.',
     skills: ['Leadership', 'React Native', 'Python', 'FastAPI', 'PostgreSQL', 'Firebase', 'pgAdmin', 'Postman', 'Heroku', 'Bitbucket', 'Jira', 'Confluence', 'Figma'],
   },
   {
@@ -79,7 +79,7 @@ export const EXPERIENCES: EXPERIENCE[] = [
     company: 'Prometheus Platform',
     duration: 'Jun 2022 – Dec 2022',
     location: 'San Diego, CA',
-    description: 'Collaborated with a team of 7 developers to build a dedicated networking website for financial stakeholders. Developed and maintained over 50 RESTful APIs in Golang, following layered architecture patterns. Coordinated with the frontend team to design PostgreSQL database schemas and HTTP request models.',
+    description: 'Collaborated with a "team of 7 developers" to build a dedicated networking platform for financial stakeholders. "Developed and maintained 50+ RESTful APIs in Golang", working closely with the frontend team to design "PostgreSQL" database schemas and HTTP request models.',
     skills: ['Golang', 'RESTful API', 'PostgreSQL', 'Postman', 'Heroku'],
   },
 ];

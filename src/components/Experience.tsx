@@ -15,6 +15,21 @@ type ExperienceItemProps = {
 
 const ExperienceItem = ({ exp }: ExperienceItemProps) => {
   const ref = useRef(null);
+  const renderDescription = (desc: string) => {
+    const parts = desc.split(/(".*?")/g);
+    return parts.map((part, index) => {
+      if (part.startsWith('"') && part.endsWith('"')) {
+        const content = part.slice(1, -1); // Remove the surrounding quotes
+        return (
+          <span key={index} style={{ color: 'gold' }}>
+            {content}
+          </span>
+        );
+      }
+      return <span key={index}>{part}</span>;
+    });
+  };
+
   return(
     <li ref={ref} className="flex flex-col my-8 first:mt-0 last:mb-0 w-[90%] lg:w-4/5 gap-1.5">
       <LiIcon reference={ref}/>
@@ -29,7 +44,7 @@ const ExperienceItem = ({ exp }: ExperienceItemProps) => {
           <h2 className='bold-20 lg:bold-24 text-darkBlue dark:text-lightBlue'><span className='md:ml-2 bold-16 lg:bold-20'>@</span>{exp.company}</h2>
         </div>
         <h2 className='regular-14 lg:regular-16 text-dark/60 dark:text-light/60 mb-2'>{exp.duration} | {exp.location}</h2>
-        <p className='regular-12 mb-2'>{exp.description}</p>
+        <p className='regular-12 mb-2'>{renderDescription(exp.description)}</p>
         <SkillsContainer skills={exp.skills} justify='justify-start' main_theme='dark'/>
       </motion.div>
     </li>
