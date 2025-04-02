@@ -21,7 +21,7 @@ const Navbar = ({ activeSection } : NavbarProps) => {
     if (targetSection == activeSection){
       setTargetSection('')
     }
-  }, [activeSection])
+  }, [activeSection, targetSection])
 
   const scrollToSection = (sectionId: string) => {
     setTargetSection(sectionId)

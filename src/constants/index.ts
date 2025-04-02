@@ -38,6 +38,14 @@ export type EXPERIENCE = {
 // EXPERIENCES
 export const EXPERIENCES: EXPERIENCE[] = [
   {
+    title: 'Coding Instructor',
+    company: 'Code Ninjas',
+    duration: 'Feb 2025 – Present',
+    location: 'Union City, CA',
+    description: 'Coached over 70 students in Python and JavaScript, strengthening their coding and problem-solving abilities. Taught 3D Unity game development in C#, resulting in more than 5 student-built games within 2 months. Additionally, designed and delivered age- and skill-appropriate curricula to maximize student engagement and learning outcomes.',
+    skills: ['Python', 'JavaScript', 'C#', 'Unity'],
+  },
+  {
     title: 'Full Stack Developer',
     company: 'Where2Be',
     duration: 'Apr 2023 – Dec 2023',

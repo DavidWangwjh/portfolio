@@ -26,7 +26,7 @@ const ExperienceItem = ({ exp }: ExperienceItemProps) => {
       >
         <div className='md:flex'>
           <h2 className='bold-20 lg:bold-24'>{exp.title}</h2>
-          <h2 className='bold-20 lg:bold-24'><span className='md:ml-2 bold-16 lg:bold-20'>@</span>{exp.company}</h2>
+          <h2 className='bold-20 lg:bold-24 text-darkBlue dark:text-lightBlue'><span className='md:ml-2 bold-16 lg:bold-20'>@</span>{exp.company}</h2>
         </div>
         <h2 className='regular-14 lg:regular-16 text-dark/60 dark:text-light/60 mb-2'>{exp.duration} | {exp.location}</h2>
         <p className='regular-12 mb-2'>{exp.description}</p>
