@@ -28,11 +28,11 @@ const ProjectItem = ({ proj }: ProjectItemProps) => {
         <div className='rounded-2xl overflow-hidden'>
           <FramerImage src={proj.image} alt='project cover image' width={500} height={300} className='w-full h-48 object-cover' whileHover={{scale: 1.05}} transition={{duration: 0.2}}/>
         </div>
-        <div className="p-5 pb-3">
+        <div className="p-3 pt-5">
           <h2 className='bold-24 mb-2 text-darkBlue dark:text-lightBlue'>{proj.title}</h2>
           <p className='regular-12 lg:bold-14'>{proj.description}</p>
         </div>
-        <div className='flex self-start gap-2 pl-4 pb-2'>
+        <div className='flex self-start gap-2 pl-3 pb-2 mt-auto'>
           {proj.mobile && 
           <Link href={proj.mobile} key={proj.mobile} target="_blank" rel="noopener noreferrer nofollow" className="cursor-pointer group clickable flex justify-center items-center w-10 h-10">
               <Image src='/assets/app-store.png' alt="mobile link" width={34} height={34} className="transition-all group-hover:scale-110 clickable" />

@@ -95,12 +95,23 @@ export type PROJECT = {
   web?: string,
   mobile?: string,
   lg_only?: Boolean,
-  images: string[],
+  images?: string[],
   image: string
 }
 
 // PROJECTS
 export const PROJECTS: PROJECT[] = [
+  {
+    title: 'TaskHero',
+    organization: '',
+    description: 'An AI-driven scheduling and task management platform built using Next.js, featuring an AI agent powered by Google Gemini for automated scheduling and analytics.',
+    skills: ['Next.js', 'Tailwind CSS', 'Auth.js', 'MongoDB', 'Google Gemini'],
+    web: "https://mytaskhero.vercel.app",
+    // mobile: "https://apps.apple.com/us/app/where2be-your-school-guide/id1671447709",
+    github: "https://github.com/Aaron41402/Virtual-Work-Space",
+    // images: ['/projects/old/w2b-web.png', '/projects/old/w2b-app-1.webp', '/projects/old/w2b-app-2.webp', '/projects/old/w2b-app-3.webp', '/projects/old/w2b-app-4.webp'],
+    image: '/projects/taskhero-cover.png'
+  },
   {
     title: 'Where2Be',
     organization: 'Moment Events',

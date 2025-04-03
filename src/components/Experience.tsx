@@ -21,7 +21,7 @@ const ExperienceItem = ({ exp }: ExperienceItemProps) => {
       if (part.startsWith('"') && part.endsWith('"')) {
         const content = part.slice(1, -1); // Remove the surrounding quotes
         return (
-          <span key={index} style={{ color: 'gold' }}>
+          <span key={index} className="text-gold">
             {content}
           </span>
         );
@@ -31,7 +31,7 @@ const ExperienceItem = ({ exp }: ExperienceItemProps) => {
   };
 
   return(
-    <li ref={ref} className="flex flex-col my-8 first:mt-0 last:mb-0 w-[90%] lg:w-4/5 gap-1.5">
+    <li ref={ref} className="flex flex-col my-5 lg:my-8 first:mt-0 last:mb-0 w-[90%] lg:w-4/5 gap-1.5">
       <LiIcon reference={ref}/>
       <motion.div 
         initial={{y:80}}
