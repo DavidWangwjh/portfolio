@@ -107,10 +107,19 @@ export const PROJECTS: PROJECT[] = [
     description: 'An AI-driven scheduling and task management platform built using Next.js, featuring an AI agent powered by Google Gemini for automated scheduling and analytics.',
     skills: ['Next.js', 'Tailwind CSS', 'Auth.js', 'MongoDB', 'Google Gemini'],
     web: "https://mytaskhero.vercel.app",
-    // mobile: "https://apps.apple.com/us/app/where2be-your-school-guide/id1671447709",
     github: "https://github.com/Aaron41402/Virtual-Work-Space",
-    // images: ['/projects/old/w2b-web.png', '/projects/old/w2b-app-1.webp', '/projects/old/w2b-app-2.webp', '/projects/old/w2b-app-3.webp', '/projects/old/w2b-app-4.webp'],
     image: '/projects/taskhero-cover.png'
+  },
+  {
+    title: 'DailyCals AI',
+    organization: '',
+    description: 'A native iOS app that uses AI to analyze food images and provide quick, hassle-free daily calorie tracking.',
+    skills: ['Swift', 'XCode', 'Next.js', 'Tailwind CSS', 'MongoDB', 'Google Gemini'],
+    web: "https://dailycals-ai.vercel.app/",
+    // mobile: "https://apps.apple.com/us/app/where2be-your-school-guide/id1671447709",
+    github: "https://github.com/DavidWangwjh/dailycals-ai",
+    // images: ['/projects/old/w2b-web.png', '/projects/old/w2b-app-1.webp', '/projects/old/w2b-app-2.webp', '/projects/old/w2b-app-3.webp', '/projects/old/w2b-app-4.webp'],
+    image: '/projects/dailycalsai-cover.png'
   },
   {
     title: 'Where2Be',
