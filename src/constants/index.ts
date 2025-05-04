@@ -42,7 +42,7 @@ export const EXPERIENCES: EXPERIENCE[] = [
     company: 'Code Ninjas',
     duration: 'Feb 2025 – Present',
     location: 'Union City, CA',
-    description: 'Coached "70+ students" in "Python" and "JavaScript", strengthening their coding and problem-solving abilities. Taught "3D Unity game development in C#", resulting in "5+ student-built games within 2 months". Additionally, designed and delivered age- and skill-appropriate curricula to maximize student engagement and learning outcomes.',
+    description: 'Coached "100+ students" in "Python" and "JavaScript", strengthening their coding and problem-solving abilities. Taught "3D Unity game development in C#", resulting in "5+ student-built games within 2 months". Additionally, designed and delivered age- and skill-appropriate curricula to maximize student engagement and learning outcomes.',
     skills: ['Python', 'JavaScript', 'C#', 'Unity'],
   },
   {
