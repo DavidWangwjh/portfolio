@@ -48,7 +48,8 @@ module.exports = {
         cursor: '#9b8d25',
         lightBlue: '#CEE5FD',
         darkBlue: '#02294F',
-        gold: "#EFC700"
+        gold: "#EFC700",
+        darkGold: "#CFA700"
       },
       backgroundImage: {
         'bg-img-1': "url('/img-1.png')",

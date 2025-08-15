@@ -21,7 +21,7 @@ const ExperienceItem = ({ exp }: ExperienceItemProps) => {
       if (part.startsWith('"') && part.endsWith('"')) {
         const content = part.slice(1, -1); // Remove the surrounding quotes
         return (
-          <span key={index} className="text-gold">
+          <span key={index} className="text-darkGold dark:text-gold">
             {content}
           </span>
         );
