@@ -4,6 +4,7 @@ import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
 import Experience from "@/components/Experience";
 import Projects from "@/components/Projects";
+import Toolkit from "@/components/Toolkit";
 import { useInView } from 'react-intersection-observer';
 
 export default function Home() {
@@ -30,6 +31,7 @@ export default function Home() {
         <Hero innerRef={refHome}/>
         <Experience innerRef={refExperience}/>
         <Projects innerRef={refProjects}/>
+        <Toolkit/>
       </div>
     </div>
     

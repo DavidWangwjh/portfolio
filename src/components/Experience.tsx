@@ -39,7 +39,7 @@ const ExperienceItem = ({ exp }: ExperienceItemProps) => {
         transition={{duration:0.8, type:'spring'}}
         className='w-full'
       >
-        <div className='md:flex'>
+        <div className='md:flex md:flex-wrap md:items-baseline'>
           <h2 className='bold-20 lg:bold-24'>{exp.title}</h2>
           <h2 className='bold-20 lg:bold-24 text-darkBlue dark:text-lightBlue'><span className='md:ml-2 bold-16 lg:bold-20'>@</span>{exp.company}</h2>
         </div>

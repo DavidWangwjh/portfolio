@@ -14,12 +14,10 @@ export const CONTACT_INFO = [
 
 // TOOLKIT
 export const TOOLKIT = {
-  "Web & Mobile Development": [
-      "HTML", "CSS/Tailwind CSS", "Javascript/Typescript", "React.js", "Next.js", "React Native", "Python", "PostgreSQL", "Neo4j"
-  ],
-  "Development Tools": [
-      "GitHub", "Bitbucket", "Jira", "Confluence",  "Firebase", "Heroku", "pgAdmin", "Postman"
-  ]
+  "Languages": ["JavaScript", "TypeScript", "Python", "Golang", "HTML", "CSS", "SQL"],
+  "Frameworks & Libraries": ["React", "Next.js", "React Native", "Node.js", "FastAPI", "PyTorch", "Tailwind CSS"],
+  "Databases & Backend": ["PostgreSQL", "MongoDB", "MySQL", "Firebase", "Supabase", "Neo4j", "REST APIs"],
+  "Development Tools": ["Git", "GitHub", "Docker", "AWS", "CI/CD", "Unity", "Jira", "Postman"],
 }
 
 export type EXPERIENCE = {
@@ -38,20 +36,20 @@ export type EXPERIENCE = {
 // EXPERIENCES
 export const EXPERIENCES: EXPERIENCE[] = [
   {
-    title: 'Coding Instructor',
-    company: 'Code Ninjas',
+    title: 'Center Director & Coding Instructor',
+    company: 'Code Ninjas Union City',
     duration: 'Feb 2025 – Present',
     location: 'Union City, CA',
-    description: 'Coached "100+ students" in "Python", "JavaScript", and "C#", developing strong coding and problem-solving skills. Led "Congressional App Challenge" prep program, guiding students build web applications using "HTML", "CSS", and "JavaScript". Taught game development using "Roblox Studio" and "Lua", resulting in "30+ student-built games".',
-    skills: ['Python', 'JavaScript', 'C#', 'HTML', 'CSS', 'Unity', 'Roblox'],
+    description: 'Directed daily operations, program promotions, and digital marketing for an education center serving "500+ clients", growing "2026 summer camp revenue by over 20%". Led a team of "20+ instructors" delivering coding and robotics programs across "Python", "JavaScript", "Web Development", and competitive "FIRST Robotics".',
+    skills: ['Leadership', 'Python', 'JavaScript', 'Web Development', 'FIRST Robotics', 'Digital Marketing'],
   },
   {
-    title: 'Full Stack Developer',
+    title: 'Software Developer Intern',
     company: 'Where2Be',
     duration: 'Apr 2023 – Dec 2023',
-    location: 'Remote',
-    description: 'Launched a "React Native" mobile app, attracting "2,000+ users" as a dedicated college events platform. Built a "Starlette API backend in Python", seamlessly integrating a "Neo4j" database and "Docker" containers. Additionally, created a dynamic website using "Next.js" and "Tailwind CSS" to boost user engagement and marketing.',
-    skills: ['React Native', 'Next.js', 'Python', 'Starlette API', 'Neo4j', 'Firebase', 'Docker'],
+    location: 'San Diego, CA',
+    description: 'Launched a "React Native" mobile app tailored for college events, scaling the platform to "2,000+ users". Built a "Python" backend with "Neo4j" and "Docker" to streamline event workflows and local development. Developed a dynamic marketing website with "Next.js" and "Tailwind CSS" to improve visibility.',
+    skills: ['React Native', 'Next.js', 'Tailwind CSS', 'Python', 'Neo4j', 'Docker'],
     web: "https://www.where2be.app/",
     mobile: "https://apps.apple.com/us/app/where2be-your-school-guide/id1671447709",
     github: "https://github.com/MomentEvents/Where2Be-Web",
@@ -67,20 +65,20 @@ export const EXPERIENCES: EXPERIENCE[] = [
     // lg_only: true
   },
   {
-    title: 'Chief Technology Officer',
+    title: 'Co-Founder & Chief Technology Officer',
     company: 'Prolympia',
     duration: 'Sep 2022 – Apr 2023',
     location: 'San Diego, CA',
-    description: 'Led "Full Stack" development of a "React Native" app, designing a user-friendly UI aligned with product goals. Developed a "FastAPI backend in Python", integrating "Firebase" and "PostgreSQL" databases for scalability. Served as "Scrum Master", "improving team efficiency by 90%" through "Agile" planning and sprint execution.',
-    skills: ['Leadership', 'React Native', 'Python', 'FastAPI', 'PostgreSQL', 'Firebase', 'pgAdmin', 'Postman', 'Heroku', 'Bitbucket', 'Jira', 'Confluence', 'Figma'],
+    description: 'Led full-stack development of a "React Native" app, translating product requirements into scalable architecture and seamless user-facing features. Built a highly available "FastAPI" backend in "Python", integrating "Firebase" and "PostgreSQL" for secure authentication, resilient data storage, and complex workflows. Facilitated "Agile" sprint planning and daily standups to hit key launch targets on schedule.',
+    skills: ['Leadership', 'React Native', 'Python', 'FastAPI', 'PostgreSQL', 'Firebase', 'Agile'],
   },
   {
-    title: 'Backend Developer',
+    title: 'Software Developer Intern',
     company: 'Prometheus Platform',
     duration: 'Jun 2022 – Dec 2022',
     location: 'San Diego, CA',
-    description: 'Collaborated with a "team of 7 developers" to build a dedicated networking platform for financial stakeholders. "Developed and maintained 50+ RESTful APIs in Golang", working closely with the frontend team to design "PostgreSQL" database schemas and HTTP request models.',
-    skills: ['Golang', 'RESTful API', 'PostgreSQL', 'Postman', 'Heroku'],
+    description: 'Collaborated with a "7-developer team" to build a web-based networking platform using "React" and "TypeScript", optimizing frontend performance for financial stakeholders. Developed and maintained "50+ REST APIs in Golang" and designed optimized "PostgreSQL" database schemas to support core platform functionality.',
+    skills: ['React', 'TypeScript', 'Golang', 'REST APIs', 'PostgreSQL'],
   },
 ];
 
@@ -96,11 +94,34 @@ export type PROJECT = {
   mobile?: string,
   lg_only?: Boolean,
   images?: string[],
-  image: string
+  image?: string
+  imageFit?: 'cover' | 'contain'
+  category?: string
 }
 
 // PROJECTS
 export const PROJECTS: PROJECT[] = [
+  {
+    title: 'TimeToVolunteer',
+    organization: '',
+    category: 'Full-Stack Development',
+    description: 'A full-stack volunteer management platform with role-based dashboards, secure Supabase authentication, and PostgreSQL row-level security. Supports application review, opportunity management, and volunteer coordination from end to end.',
+    skills: ['Next.js', 'TypeScript', 'Tailwind CSS', 'Supabase', 'PostgreSQL'],
+    github: 'https://github.com/DavidWangwjh/TimeToVolunteer',
+    web: 'https://timetovolunteer.org/',
+    image: '/projects/timetovolunteer-cover.png',
+    imageFit: 'contain',
+  },
+  {
+    title: 'EBCL Medical Time Series Model',
+    organization: 'PyHealth',
+    category: 'Machine Learning Contribution',
+    description: 'Implemented event-based contrastive learning in PyHealth using PyTorch, Transformer encoding, and attention pooling. Built MIMIC-IV evaluation workflows, synthetic validation, and ablation experiments, culminating in an approved pull request.',
+    skills: ['PyTorch', 'PyHealth', 'Python', 'MIMIC-IV'],
+    github: 'https://github.com/maincsna/PyHealth',
+    image: '/projects/ebcl-cover.png',
+    imageFit: 'contain',
+  },
   {
     title: 'TaskHero',
     organization: '',

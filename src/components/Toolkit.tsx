@@ -3,14 +3,16 @@ import SkillsContainer from "./SkillsContainer";
 
 const Toolkit = () => {
   return (
-    <section className="max-container padding-container min-h-dvh flex flex-col items-center justify-center w-full">
-        <h1 className="bold-32 sm:bold-36 md:bold-48 self-center mb-6">Main Toolkit</h1>
+    <section id="skills" aria-labelledby="skills-heading" className="max-container padding-container flex flex-col items-center w-full py-16">
+        <h1 id="skills-heading" className="bold-28 sm:bold-32 md:bold-40 mb-10 underline underline-offset-4">Technical Skills</h1>
+        <div className="grid w-full max-w-4xl gap-6 md:grid-cols-2">
         {Object.entries(TOOLKIT).map(([section, items]) => (
-            <div key={section} className="text-center bg-dark dark:bg-light ml-12 mb-8 p-6 rounded-lg shadow-lg">
-                <h2 className="bold-20 lg:bold-28 mb-6 text-light dark:text-dark">{section}</h2>
+            <div key={section} className="text-center bg-dark dark:bg-light p-6 rounded-lg shadow-lg">
+                <h2 className="bold-20 mb-6 text-light dark:text-dark">{section}</h2>
                 <SkillsContainer skills={items} justify="justify-center" main_theme="light"/>
             </div>
         ))}
+        </div>
     </section>
   )
 }

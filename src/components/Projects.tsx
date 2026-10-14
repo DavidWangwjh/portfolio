@@ -5,6 +5,7 @@ import Link from 'next/link';
 import { PROJECTS, PROJECT } from '@/constants';
 import { motion } from 'framer-motion'
 import clsx from 'clsx';
+import SkillsContainer from './SkillsContainer';
 
 const FramerImage = motion(Image)
 
@@ -26,11 +27,22 @@ const ProjectItem = ({ proj }: ProjectItemProps) => {
     >
       <li className="relative rounded-2xl flex flex-col border-2 border-darkBlue dark:border-lightBlue bg-light dark:bg-dark z-20 p-2 h-full bg-gradient-to-b dark:from-darkBlue dark:to-dark from-lightBlue to-light">
         <div className='rounded-2xl overflow-hidden'>
-          <FramerImage src={proj.image} alt='project cover image' width={500} height={300} className='w-full h-48 object-cover' whileHover={{scale: 1.05}} transition={{duration: 0.2}}/>
+          {proj.image ? (
+            <FramerImage src={proj.image} alt={`${proj.title} project cover`} width={500} height={300} className={clsx('w-full h-48', proj.imageFit === 'contain' ? 'object-contain bg-white' : 'object-cover')} whileHover={{scale: proj.imageFit === 'contain' ? 1 : 1.05}} transition={{duration: 0.2}}/>
+          ) : (
+            <div className='flex h-48 flex-col justify-center gap-4 bg-darkBlue p-6 text-light'>
+              <span className='text-xs uppercase tracking-widest text-gold'>{proj.category}</span>
+              <span className='text-2xl font-semibold'>{proj.title}</span>
+              {proj.organization && <span className='text-sm'>{proj.organization}</span>}
+            </div>
+          )}
         </div>
         <div className="p-3 pt-5">
           <h2 className='bold-24 mb-2 text-darkBlue dark:text-lightBlue'>{proj.title}</h2>
           <p className='regular-12 lg:bold-14'>{proj.description}</p>
+          <div className='mt-4'>
+            <SkillsContainer skills={proj.skills} justify='justify-start' main_theme='dark'/>
+          </div>
         </div>
         <div className='flex self-start gap-2 pl-3 pb-2 mt-auto'>
           {proj.mobile && 

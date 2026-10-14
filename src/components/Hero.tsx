@@ -45,13 +45,13 @@ const Hero = ({ innerRef }: HeroProps ) => {
       </motion.div>
       <div className='flex flex-col items-center lg:items-start w-full md:w-4/5 lg:w-3/5'>
         <TypeAnimation className="bold-32 sm:bold-36 md:bold-48 lg:bold-52" sequence={['', 1000, 'I\'M DAVID WANG']} cursor={false} speed={40}/>
-        <TypeAnimation className="regular-16 lg:regular-22 pt-4 pb-2 px-7 lg:px-0 text-center lg:text-start w-full text-darkGold dark:text-gold" sequence={['', 2000, 'Full Stack Software Engineer, AI Developer']} cursor={false} speed={90}/>
-        <TypeAnimation className="max-md:hidden regular-16 lg:regular-18 text-center lg:text-start w-full" sequence={['', 2800, 'Master of Computer Science @University of Illinois Urbana-Champaign']} cursor={false} speed={90}/>
-        <TypeAnimation className="max-md:hidden regular-16 lg:regular-18 pb-8 text-center lg:text-start w-full" sequence={['', 2800, 'B.S. Computer Science @University of California, San Diego']} cursor={false} speed={90}/>
-        <TypeAnimation className="md:hidden regular-16 lg:regular-18 text-center lg:text-start w-full" sequence={['', 3000, 'Master of Computer Science @University of Illinois Urbana-Champaign']} cursor={false} speed={90}/>
-        <TypeAnimation className="md:hidden regular-16 lg:regular-18 pb-8 text-center lg:text-start w-full" sequence={['', 3000, 'B.S. Computer Science @University of California, San Diego']} cursor={false} speed={90}/>
+        <TypeAnimation className="regular-16 lg:regular-22 pt-4 pb-2 px-7 lg:px-0 text-center lg:text-start w-full text-darkGold dark:text-gold" sequence={['', 2000, 'Full Stack Software Engineer & Independent Developer']} cursor={false} speed={90}/>
+        <TypeAnimation className="max-md:hidden regular-16 lg:regular-18 text-center lg:text-start w-full" sequence={['', 2800, 'Master of Computer Science · UIUC · 2026 · GPA 4.0']} cursor={false} speed={90}/>
+        <TypeAnimation className="max-md:hidden regular-16 lg:regular-18 pb-8 text-center lg:text-start w-full" sequence={['', 2800, 'B.S. Computer Science · UC San Diego · 2023 · GPA 3.6']} cursor={false} speed={90}/>
+        <TypeAnimation className="md:hidden regular-16 lg:regular-18 text-center lg:text-start w-full" sequence={['', 3000, 'Master of Computer Science · UIUC · 2026 · GPA 4.0']} cursor={false} speed={90}/>
+        <TypeAnimation className="md:hidden regular-16 lg:regular-18 pb-8 text-center lg:text-start w-full" sequence={['', 3000, 'B.S. Computer Science · UC San Diego · 2023 · GPA 3.6']} cursor={false} speed={90}/>
         <motion.ul className="flex flex-row gap-4 md:gap-6 w-full justify-center lg:justify-start items-center" initial={{opacity: 0}} animate={{opacity: 1}} transition={{delay: 3, duration: 2.5}}>
-          <Link href='/resume/resume.html' target="_blank" rel="noopener noreferrer nofollow" className='flex items-center bg-black dark:bg-light text-light dark:text-dark py-2.5 px-4 gap-2 rounded-lg text-lg font-semibold hover:scale-110'>
+          <Link href='/resume/David_Resume.pdf' target="_blank" rel="noopener noreferrer nofollow" className='flex items-center bg-black dark:bg-light text-light dark:text-dark py-2.5 px-4 gap-2 rounded-lg text-lg font-semibold hover:scale-110'>
             RESUME
             <LinkArrow className={''}/>
           </Link>

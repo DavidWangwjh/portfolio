@@ -10,7 +10,7 @@ const montserrat = Montserrat({
 
 export const metadata: Metadata = {
   title: "David Wang - Portfolio",
-  description: "This is David's portfolio created using Next.js",
+  description: "David Wang — full-stack software engineer and AI developer. Explore projects in web and mobile development, machine learning, and volunteer management.",
 };
 
 export default function RootLayout({
